@@ -15,11 +15,47 @@ export default function SignupForm() {
     company: "",
     jobTitle: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
-    // Handle form submission
+    setIsSubmitting(true)
+    setSubmitStatus("idle")
+
+    try {
+      const response = await fetch("/api/submit-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        throw new Error("Failed to submit")
+      }
+
+      const result = await response.json()
+
+      if (result.success) {
+        setSubmitStatus("success")
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          jobTitle: "",
+        })
+      } else {
+        throw new Error("Submission failed")
+      }
+    } catch (error) {
+      console.error("Form submission error:", error)
+      setSubmitStatus("error")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -34,6 +70,22 @@ export default function SignupForm() {
       <div className="bg-card border border-border p-8 md:p-12">
         <h2 className="text-3xl md:text-4xl font-bold mb-2 text-balance">GET UPDATES</h2>
         <p className="text-muted-foreground mb-8">Stay informed about made here 2026</p>
+
+        {submitStatus === "success" && (
+          <div className="mb-6 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-md">
+            <p className="text-green-800 dark:text-green-200 font-medium">
+              Thank you! Your information has been submitted successfully.
+            </p>
+          </div>
+        )}
+
+        {submitStatus === "error" && (
+          <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-md">
+            <p className="text-red-800 dark:text-red-200 font-medium">
+              Something went wrong. Please try again.
+            </p>
+          </div>
+        )}
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
@@ -118,9 +170,10 @@ export default function SignupForm() {
 
           <Button
             type="submit"
-            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 h-12 text-base font-medium"
+            disabled={isSubmitting}
+            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 h-12 text-base font-medium disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Submit
+            {isSubmitting ? "Submitting..." : "Submit"}
           </Button>
         </form>
       </div>

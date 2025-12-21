@@ -131,7 +131,7 @@ export default function MediaGallery() {
               <img
                 src={item.imageSrc || "/placeholder.svg"}
                 alt={item.imageAlt}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
           </div>
