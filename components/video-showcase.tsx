@@ -7,10 +7,13 @@ export default function VideoShowcase() {
       </div>
 
       <div className="relative aspect-video bg-card border border-border overflow-hidden">
-        <video className="w-full h-full object-cover" controls>
-          <source src="/placeholder-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <iframe
+          src="https://player.vimeo.com/video/1140137345?badge=0&autopause=0&player_id=0&app_id=58479"
+          className="absolute top-0 left-0 w-full h-full"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          style={{ border: 0 }}
+          title="Made Here | 2025"
+        />
       </div>
     </section>
   )

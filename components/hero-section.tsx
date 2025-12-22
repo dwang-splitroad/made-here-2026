@@ -6,11 +6,11 @@ export default function HeroSection() {
       <div className="text-center">
         <div className="flex justify-center mb-8">
           <Image
-            src="/made-here-logo.png"
+            src="/made-here-2026-header.png"
             alt="Made Here 2026 - A Manufacturing Showcase"
-            width={600}
-            height={800}
-            className="w-full max-w-md md:max-w-lg lg:max-w-xl h-auto"
+            width={1200}
+            height={400}
+            className="w-full max-w-4xl md:max-w-5xl lg:max-w-6xl h-auto"
             priority
           />
         </div>
