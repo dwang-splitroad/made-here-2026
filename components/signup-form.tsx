@@ -66,28 +66,28 @@ export default function SignupForm() {
   }
 
   return (
-    <section className="px-4 py-16 md:py-24 max-w-2xl mx-auto">
-      <div className="bg-card border border-border p-8 md:p-12">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-balance">GET UPDATES</h2>
-        <p className="text-muted-foreground mb-8">Stay informed about made here 2026</p>
+    <section className="px-4 py-12 sm:py-16 md:py-24 max-w-2xl mx-auto">
+      <div className="bg-card border border-border p-6 sm:p-8 md:p-12">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-balance">GET UPDATES</h2>
+        <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8">Stay informed about made here 2026</p>
 
         {submitStatus === "success" && (
-          <div className="mb-6 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-md">
-            <p className="text-green-800 dark:text-green-200 font-medium">
+          <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-md">
+            <p className="text-sm sm:text-base text-green-800 dark:text-green-200 font-medium">
               Thank you! Your information has been submitted successfully.
             </p>
           </div>
         )}
 
         {submitStatus === "error" && (
-          <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-md">
-            <p className="text-red-800 dark:text-red-200 font-medium">
+          <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-md">
+            <p className="text-sm sm:text-base text-red-800 dark:text-red-200 font-medium">
               Something went wrong. Please try again.
             </p>
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
           <div>
             <Label htmlFor="name" className="text-sm font-medium mb-2 block">
               Name
@@ -171,7 +171,7 @@ export default function SignupForm() {
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 h-12 text-base font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 h-11 sm:h-12 text-sm sm:text-base font-medium disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? "Submitting..." : "Submit"}
           </Button>

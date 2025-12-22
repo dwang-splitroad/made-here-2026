@@ -14,8 +14,8 @@ export default function HeroSection() {
             priority
           />
         </div>
-        <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-          An event where creators and innovators come together
+        <p className="mt-6 text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty px-4">
+          Where the Orthopedic Capital of the World showcases their capabilities, echo system, teamwork, and education funnel. If it's Orthopedics, it's MADE HERE!
         </p>
       </div>
     </section>

@@ -101,21 +101,22 @@ export default function MediaGallery() {
   ]
 
   return (
-    <section className="px-4 py-16 md:py-24 max-w-7xl mx-auto">
-      <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">GALLERY</h2>
+    <section className="px-4 py-12 sm:py-16 md:py-24 max-w-7xl mx-auto">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center">GALLERY</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
         {galleryItems.map((item) => (
           <div key={item.id} className="contents">
             {/* Video - Left Column */}
-            <div className="relative aspect-video bg-card border border-border overflow-hidden">
+            <div className="relative aspect-video bg-card border border-border overflow-hidden rounded-sm">
               {item.videoId ? (
                 <iframe
-                  src={`https://player.vimeo.com/video/${item.videoId}?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479`}
+                  src={`https://player.vimeo.com/video/${item.videoId}?autoplay=1&muted=1&loop=1&controls=0&title=0&byline=0&portrait=0&badge=0&background=1&autopause=0&player_id=0&app_id=58479`}
                   className="absolute top-0 left-0 w-full h-full"
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
                   style={{ border: 0 }}
                   title={item.videoTitle}
+                  allowFullScreen
                 />
               ) : (
                 <video className="w-full h-full object-cover" controls>
@@ -126,7 +127,7 @@ export default function MediaGallery() {
             </div>
 
             {/* Image - Right Column */}
-            <div className="relative aspect-video bg-card border border-border overflow-hidden">
+            <div className="relative aspect-video bg-card border border-border overflow-hidden rounded-sm">
               <img
                 src={item.imageSrc || "/placeholder.svg"}
                 alt={item.imageAlt}
