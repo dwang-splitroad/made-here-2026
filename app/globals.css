@@ -131,6 +131,6 @@
 }
 
 .form-orange-placeholder input[data-slot="input"]::placeholder {
-  color: #FF6B35 !important;
+  color: lab(54.8% 66.8 56.8) !important;
   opacity: 1;
 }

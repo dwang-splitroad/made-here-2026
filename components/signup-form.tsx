@@ -75,7 +75,7 @@ export default function SignupForm() {
               fontFamily: 'var(--font-roboto-condensed), "Avenir Next Condensed", "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
               fontStretch: 'condensed',
               fontWeight: 700,
-              color: '#FF6B35',
+              color: 'lab(54.8% 66.8 56.8)',
               letterSpacing: '0.02em'
             }}
           >

@@ -4,98 +4,98 @@ export default function MediaGallery() {
       id: 1,
       videoId: "1148461023",
       videoTitle: "Instrumedical Technologies",
-      imageSrc: "/gallery-images/8-Instru-med.jpg",
+      imageSrc: "/gallery-images/instrumed-no-background-reduced-01.png",
       imageAlt: "Instrumedical Technologies",
     },
     {
       id: 2,
       videoId: "1148461140",
       videoTitle: "Micropulse",
-      imageSrc: "/gallery-images/10-Micropulse.jpg",
+      imageSrc: "/gallery-images/micropulseno-background-reduced-02.png",
       imageAlt: "Micropulse",
     },
     {
       id: 3,
       videoId: "1148461212",
       videoTitle: "Instrumental Machine & Development",
-      imageSrc: "/gallery-images/12-IMD.jpg",
+      imageSrc: "/gallery-images/imd-no-background-reduced-03.png",
       imageAlt: "Instrumental Machine & Development",
     },
     {
       id: 4,
       videoId: "1148461271",
       videoTitle: "Qualitex",
-      imageSrc: "/gallery-images/14-Qualitex.jpg",
+      imageSrc: "/gallery-images/qualitex-no-background-reduced-04.png",
       imageAlt: "Qualitex",
     },
     {
       id: 5,
       videoId: "1148461328",
       videoTitle: "Sparc Engineers",
-      imageSrc: "/gallery-images/16-Sparc.jpg",
+      imageSrc: "/gallery-images/sparc-no-background-reduced-05.png",
       imageAlt: "Sparc Engineers",
     },
     {
       id: 6,
       videoId: "1148461396",
       videoTitle: "TriPoint Surgical",
-      imageSrc: "/gallery-images/18-Tripoint.jpg",
+      imageSrc: "/gallery-images/tripoint-no-background-reduced-06.png",
       imageAlt: "TriPoint Surgical",
     },
     {
       id: 7,
       videoId: "1148461573",
       videoTitle: "Single Source Medical",
-      imageSrc: "/gallery-images/20-Single Source.jpg",
+      imageSrc: "/gallery-images/single-source-no-background-reduced-07.png",
       imageAlt: "Single Source Medical",
     },
     {
       id: 8,
       videoId: "1148461644",
       videoTitle: "Tecomet",
-      imageSrc: "/gallery-images/22-Tecomet.jpg",
+      imageSrc: "/gallery-images/tecomet-no-background-reduced-08.png",
       imageAlt: "Tecomet",
     },
     {
       id: 9,
       videoId: "1148461710",
       videoTitle: "Autocam Medical",
-      imageSrc: "/gallery-images/24-Autocam.jpg",
+      imageSrc: "/gallery-images/autocam-no-background-reduced-09.png",
       imageAlt: "Autocam Medical",
     },
     {
       id: 10,
       videoId: "1148461848",
       videoTitle: "Complexus Medical",
-      imageSrc: "/gallery-images/28-Complexus.jpg",
+      imageSrc: "/gallery-images/complexus-no-background-reduced-11.png",
       imageAlt: "Complexus Medical",
     },
     {
       id: 11,
       videoId: "1148461775",
       videoTitle: "Precision Medical Technologies",
-      imageSrc: "/gallery-images/26-Precision Med.jpg",
+      imageSrc: "/gallery-images/precision-no-background-reduced-10.png",
       imageAlt: "Precision Medical Technologies",
     },
     {
       id: 12,
       videoId: "1148462032",
       videoTitle: "Rayco Steel Process",
-      imageSrc: "/gallery-images/34-Rayco.jpg",
+      imageSrc: "/gallery-images/rayco-no-background-reduced-14.png",
       imageAlt: "Rayco Steel Process",
     },
     {
       id: 13,
       videoId: "1148461975",
       videoTitle: "Avalign",
-      imageSrc: "/gallery-images/32-Avalign.jpg",
+      imageSrc: "/gallery-images/avalign-no-background-reduced-13.png",
       imageAlt: "Avalign",
     },
     {
       id: 14,
       videoId: "1148461915",
       videoTitle: "Arch Medical Solutions",
-      imageSrc: "/gallery-images/30-Arch.jpg",
+      imageSrc: "/gallery-images/arch-no-background-reduced-12.png",
       imageAlt: "Arch Medical Solutions",
     },
   ]
@@ -111,12 +111,13 @@ export default function MediaGallery() {
             <div className="relative aspect-video bg-card border border-border overflow-hidden rounded-sm">
               {item.videoId ? (
                 <iframe
-                  src={`https://player.vimeo.com/video/${item.videoId}?autoplay=1&muted=1&loop=1&controls=0&title=0&byline=0&portrait=0&badge=0&background=1&autopause=0&player_id=0&app_id=58479`}
+                  src={`https://player.vimeo.com/video/${item.videoId}?autoplay=1&muted=1&loop=1&controls=0&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479&responsive=1&playsinline=1`}
                   className="absolute top-0 left-0 w-full h-full"
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
                   style={{ border: 0 }}
                   title={item.videoTitle}
                   allowFullScreen
+                  loading="lazy"
                 />
               ) : (
                 <video className="w-full h-full object-cover" controls>
