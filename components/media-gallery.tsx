@@ -94,10 +94,10 @@ export default function MediaGallery() {
     // One more placeholder row to complete the 2x14 grid
     {
       id: 14,
-      videoId: null,
-      videoTitle: "Manufacturing video 14",
+      videoId: "1148461915",
+      videoTitle: "Arch Medical Solutions",
       imageSrc: "/gallery-images/arch.jpg",
-      imageAlt: "Arch",
+      imageAlt: "Arch Medical Solutions",
     },
   ]
 
