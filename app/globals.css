@@ -124,3 +124,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+.form-orange-placeholder input[data-slot="input"]::placeholder {
+  color: #FF6B35 !important;
+  opacity: 1;
+}

@@ -66,10 +66,30 @@ export default function SignupForm() {
   }
 
   return (
-    <section className="px-4 py-12 sm:py-16 md:py-24 max-w-2xl mx-auto">
-      <div className="bg-card border border-border p-6 sm:p-8 md:p-12">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-balance">GET UPDATES</h2>
-        <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8">Stay informed about made here 2026</p>
+    <section className="px-4 py-4 sm:py-6 md:py-8 max-w-4xl mx-auto">
+      <div className="bg-card p-6 sm:p-8 md:p-12">
+        <div className="mb-6 sm:mb-8 text-center">
+          <h2 
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-balance"
+            style={{
+              fontFamily: 'var(--font-roboto-condensed), "Avenir Next Condensed", "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+              fontStretch: 'condensed',
+              fontWeight: 700,
+              color: '#FF6B35',
+              letterSpacing: '0.02em'
+            }}
+          >
+            GET UPDATES
+          </h2>
+          <p 
+            className="text-lg sm:text-xl md:text-2xl font-medium"
+            style={{
+              color: 'lab(15.2% 18.4 -37)'
+            }}
+          >
+            Be Sure To Be In The Know For Next Years Showcase
+          </p>
+        </div>
 
         {submitStatus === "success" && (
           <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-md">
@@ -87,59 +107,9 @@ export default function SignupForm() {
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-          <div>
-            <Label htmlFor="name" className="text-sm font-medium mb-2 block">
-              Name
-            </Label>
-            <Input
-              id="name"
-              name="name"
-              type="text"
-              required
-              value={formData.name}
-              onChange={handleChange}
-              className="bg-input border-border"
-              placeholder="Enter your name"
-            />
-          </div>
-
-          <div>
-            <Label htmlFor="email" className="text-sm font-medium mb-2 block">
-              Email
-            </Label>
-            <Input
-              id="email"
-              name="email"
-              type="email"
-              required
-              value={formData.email}
-              onChange={handleChange}
-              className="bg-input border-border"
-              placeholder="your@email.com"
-            />
-          </div>
-
-          <div>
-            <Label htmlFor="phone" className="text-sm font-medium mb-2 block">
-              Phone Number
-            </Label>
-            <Input
-              id="phone"
-              name="phone"
-              type="tel"
-              required
-              value={formData.phone}
-              onChange={handleChange}
-              className="bg-input border-border"
-              placeholder="+1 (555) 000-0000"
-            />
-          </div>
-
-          <div>
-            <Label htmlFor="company" className="text-sm font-medium mb-2 block">
-              Company
-            </Label>
+        <form onSubmit={handleSubmit} className="space-y-4 form-orange-placeholder">
+          {/* First Row: Company, Name, Title */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Input
               id="company"
               name="company"
@@ -147,15 +117,21 @@ export default function SignupForm() {
               required
               value={formData.company}
               onChange={handleChange}
-              className="bg-input border-border"
-              placeholder="Your company"
+              className="bg-white border-border"
+              placeholder="Company"
             />
-          </div>
 
-          <div>
-            <Label htmlFor="jobTitle" className="text-sm font-medium mb-2 block">
-              Job Title
-            </Label>
+            <Input
+              id="name"
+              name="name"
+              type="text"
+              required
+              value={formData.name}
+              onChange={handleChange}
+              className="bg-white border-border"
+              placeholder="Name"
+            />
+
             <Input
               id="jobTitle"
               name="jobTitle"
@@ -163,19 +139,59 @@ export default function SignupForm() {
               required
               value={formData.jobTitle}
               onChange={handleChange}
-              className="bg-input border-border"
-              placeholder="Your role"
+              className="bg-white border-border"
+              placeholder="Title"
             />
           </div>
 
-          <Button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 h-11 sm:h-12 text-sm sm:text-base font-medium disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            {isSubmitting ? "Submitting..." : "Submit"}
-          </Button>
+          {/* Second Row: Email, Phone, Submit */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Input
+              id="email"
+              name="email"
+              type="email"
+              required
+              value={formData.email}
+              onChange={handleChange}
+              className="bg-white border-border"
+              placeholder="Email"
+            />
+
+            <Input
+              id="phone"
+              name="phone"
+              type="tel"
+              required
+              value={formData.phone}
+              onChange={handleChange}
+              className="bg-white border-border"
+              placeholder="Phone"
+            />
+
+            <div className="flex items-end">
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full text-white hover:opacity-90 h-11 sm:h-12 text-sm sm:text-base font-bold uppercase disabled:opacity-50 disabled:cursor-not-allowed"
+                style={{
+                  fontFamily: 'var(--font-roboto-condensed), "Avenir Next Condensed", "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                  fontStretch: 'condensed',
+                  fontWeight: 700,
+                  backgroundColor: 'lab(15.2% 18.4 -37)',
+                  borderRadius: '0.75rem',
+                }}
+              >
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </Button>
+            </div>
+          </div>
         </form>
+        
+        <div className="mt-8 sm:mt-10 md:mt-12 text-center">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+            Where the Orthopedic Capital of the World showcases their capabilities, echo system, teamwork, and education funnel. If it's Orthopedics, it's MADE HERE!
+          </p>
+        </div>
       </div>
     </section>
   )

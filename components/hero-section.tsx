@@ -2,9 +2,9 @@ import Image from "next/image"
 
 export default function HeroSection() {
   return (
-    <section className="flex items-center justify-center min-h-[40vh] px-4 py-16 md:py-24">
+    <section className="flex items-center justify-center min-h-[30vh] px-4 py-4 sm:py-6 md:py-8">
       <div className="text-center">
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-2 sm:mb-3">
           <Image
             src="/made-here-2026-header.png"
             alt="Made Here 2026 - A Manufacturing Showcase"
@@ -14,9 +14,6 @@ export default function HeroSection() {
             priority
           />
         </div>
-        <p className="mt-6 text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty px-4">
-          Where the Orthopedic Capital of the World showcases their capabilities, echo system, teamwork, and education funnel. If it's Orthopedics, it's MADE HERE!
-        </p>
       </div>
     </section>
   )

@@ -1,11 +1,23 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Geist, Geist_Mono, Roboto_Condensed } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const robotoCondensed = Roboto_Condensed({ 
+  subsets: ["latin"],
+  weight: "700",
+  variable: "--font-roboto-condensed"
+})
+
+// Avenir Condensed font - using system fonts with condensed fallback
+const avenirCondensed = {
+  fontFamily: '"Avenir Next Condensed", "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+  fontStretch: 'condensed',
+  fontWeight: 700,
+}
 
 export const metadata: Metadata = {
   title: "MADE HERE 2026 | Get Updates",
@@ -37,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased`}>
+      <body className={`font-sans antialiased ${robotoCondensed.variable}`}>
         {children}
         <Analytics />
       </body>
