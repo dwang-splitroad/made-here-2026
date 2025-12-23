@@ -128,7 +128,7 @@ export default function MediaGallery() {
             </div>
 
             {/* Image - Right Column */}
-            <div className="relative aspect-video bg-card border border-border overflow-hidden rounded-sm">
+            <div className="relative aspect-video bg-transparent border border-border overflow-hidden rounded-sm">
               <img
                 src={item.imageSrc || "/placeholder.svg"}
                 alt={item.imageAlt}

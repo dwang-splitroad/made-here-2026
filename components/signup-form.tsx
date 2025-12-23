@@ -117,7 +117,7 @@ export default function SignupForm() {
               required
               value={formData.company}
               onChange={handleChange}
-              className="bg-white border-border"
+              className="bg-transparent border-border"
               placeholder="Company"
             />
 
@@ -128,7 +128,7 @@ export default function SignupForm() {
               required
               value={formData.name}
               onChange={handleChange}
-              className="bg-white border-border"
+              className="bg-transparent border-border"
               placeholder="Name"
             />
 
@@ -139,7 +139,7 @@ export default function SignupForm() {
               required
               value={formData.jobTitle}
               onChange={handleChange}
-              className="bg-white border-border"
+              className="bg-transparent border-border"
               placeholder="Title"
             />
           </div>
@@ -153,7 +153,7 @@ export default function SignupForm() {
               required
               value={formData.email}
               onChange={handleChange}
-              className="bg-white border-border"
+              className="bg-transparent border-border"
               placeholder="Email"
             />
 
@@ -164,7 +164,7 @@ export default function SignupForm() {
               required
               value={formData.phone}
               onChange={handleChange}
-              className="bg-white border-border"
+              className="bg-transparent border-border"
               placeholder="Phone"
             />
 
