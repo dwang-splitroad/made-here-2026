@@ -102,8 +102,6 @@ export default function MediaGallery() {
 
   return (
     <section className="px-4 py-12 sm:py-16 md:py-24 max-w-7xl mx-auto">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center">GALLERY</h2>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
         {galleryItems.map((item) => (
           <div key={item.id} className="contents">
