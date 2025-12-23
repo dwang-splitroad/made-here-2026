@@ -67,7 +67,7 @@ export default function SignupForm() {
 
   return (
     <section className="px-4 py-4 sm:py-6 md:py-8 max-w-4xl mx-auto">
-      <div className="bg-card p-6 sm:p-8 md:p-12">
+      <div className="bg-transparent p-6 sm:p-8 md:p-12">
         <div className="mb-6 sm:mb-8 text-center">
           <h2 
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-balance"
