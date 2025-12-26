@@ -148,3 +148,16 @@
   color: lab(54.8% 66.8 56.8) !important;
   opacity: 1;
 }
+
+/* Gallery scroll animations */
+@media (prefers-reduced-motion: no-preference) {
+  .gallery-item {
+    will-change: transform, opacity;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-item {
+    transition: none !important;
+  }
+}
