@@ -87,7 +87,7 @@ export default function SignupForm() {
               color: 'lab(15.2% 18.4 -37)'
             }}
           >
-            Be Sure To Be In The Know For Next Years Showcase
+            Be Sure To Be In The Know For Next Year's Showcase
           </p>
         </div>
 
@@ -189,7 +189,7 @@ export default function SignupForm() {
         
         <div className="mt-8 sm:mt-10 md:mt-12 text-center">
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Where the Orthopedic Capital of the World showcases their capabilities, echo system, teamwork, and education funnel. If it's Orthopedics, it's MADE HERE!
+            Where the Orthopedic Capital of the World showcases their capabilities, ecosystem, teamwork, and education funnel. If it's Orthopedics, it's MADE HERE!
           </p>
         </div>
       </div>

@@ -3,7 +3,7 @@ export default function VideoShowcase() {
     <section className="w-full py-16 md:py-24">
       <div className="text-center mb-8 px-4">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">IN CASE YOU MISSED IT</h2>
-        <p className="text-sm sm:text-base text-muted-foreground px-2">Watch the main stage video intro by Split Road Media and see the 14 showcases!</p>
+        <p className="text-sm sm:text-base text-muted-foreground px-2">Watch the main stage video intro by Split Road Media and see the 14 showcasing companies!</p>
       </div>
 
       <div className="px-4 max-w-7xl mx-auto">
