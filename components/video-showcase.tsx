@@ -1,5 +1,6 @@
 export default function VideoShowcase() {
   return (
+<<<<<<< HEAD
     <>
       {/* Full screen video section */}
       <section className="w-full h-screen">
@@ -12,6 +13,13 @@ export default function VideoShowcase() {
           allowFullScreen
         />
       </section>
+=======
+    <section className="w-full py-16 md:py-24">
+      <div className="text-center mb-8 px-4">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">IN CASE YOU MISSED IT</h2>
+        <p className="text-sm sm:text-base text-muted-foreground px-2">Watch the main stage video intro by Split Road Media and see the 14 showcasing companies!</p>
+      </div>
+>>>>>>> 088a983f9579f9a8f79d351d643e417a0fb9a16c
 
       {/* Text and arrow section below video */}
       <section className="w-full py-16 md:py-24 text-center px-4">
