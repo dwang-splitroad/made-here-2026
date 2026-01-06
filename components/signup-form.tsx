@@ -187,9 +187,9 @@ export default function SignupForm() {
           </div>
         </form>
         
-        <div className="mt-8 sm:mt-10 md:mt-12 text-center">
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Where the Orthopedic Capital of the World showcases their capabilities, ecosystem, teamwork, and education funnel. If it's Orthopedics, it's MADE HERE!
+        <div className="mt-6 sm:mt-8 md:mt-10 text-center">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+            Where the Orthopedic Capital of the World showcases their capabilities, ecosystem, teamwork, and education funnel. If it&apos;s Orthopedics, it&apos;s MADE HERE!
           </p>
         </div>
       </div>
