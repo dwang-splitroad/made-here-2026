@@ -1,12 +1,12 @@
 export default function VideoShowcase() {
   return (
     <>
-      {/* Video section - aspect ratio on mobile, full screen on desktop */}
-      <section className="w-full aspect-video md:h-screen md:aspect-auto">
+      {/* Video section - full width with 16:9 aspect ratio */}
+      <section className="w-full aspect-video">
         <iframe
-          src="https://player.vimeo.com/video/1148444849?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479&responsive=1"
+          src="https://player.vimeo.com/video/1148444849?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
           className="w-full h-full"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
           style={{ border: 0 }}
           title="Made Here 2025 Intro Video"
           allowFullScreen
