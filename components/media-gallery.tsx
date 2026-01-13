@@ -101,38 +101,46 @@ export default function MediaGallery() {
   ]
 
   return (
-    <section className="px-4 py-12 sm:py-16 md:py-24 max-w-7xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-        {galleryItems.map((item) => {
-          return (
-            <div key={item.id} className="contents">
-              {/* Video - Left Column */}
-              <div className="relative aspect-video bg-card border border-border overflow-hidden rounded-sm">
-                {item.videoSrc ? (
-                  <video
-                    src={item.videoSrc}
-                    className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    title={item.videoTitle}
-                  />
-                ) : null}
-              </div>
-
-              {/* Image - Right Column */}
-              <div className="relative aspect-video bg-transparent border border-border overflow-hidden rounded-sm">
-                <img
-                  src={item.imageSrc || "/placeholder.svg"}
-                  alt={item.imageAlt}
-                  className="w-full h-full object-contain transition-transform duration-500 hover:scale-105"
+    <section 
+      className="py-8"
+      style={{ backgroundColor: 'lab(84 -0.78 -7.93)' }}
+    >
+      {galleryItems.map((item) => {
+        return (
+          <div 
+            key={item.id} 
+            className="w-full flex flex-col md:flex-row py-16 md:py-24 px-4 md:px-8 lg:px-16 gap-4 md:gap-8"
+            style={{ minHeight: '85vh' }}
+          >
+            {/* Video - Left Side */}
+            <div 
+              className="relative flex-1 md:w-1/2 overflow-hidden rounded-lg"
+              style={{ backgroundColor: 'lab(84 -0.78 -7.93)' }}
+            >
+              {item.videoSrc ? (
+                <video
+                  src={item.videoSrc}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  title={item.videoTitle}
                 />
-              </div>
+              ) : null}
             </div>
-          )
-        })}
-      </div>
+
+            {/* Image - Right Side */}
+            <div className="relative flex-1 md:w-1/2 bg-transparent flex items-center justify-center overflow-hidden rounded-lg">
+              <img
+                src={item.imageSrc || "/placeholder.svg"}
+                alt={item.imageAlt}
+                className="max-w-full max-h-full object-contain p-8"
+              />
+            </div>
+          </div>
+        )
+      })}
     </section>
   )
 }

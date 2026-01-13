@@ -13,8 +13,13 @@ export default function VideoShowcase() {
         />
       </section>
 
-      {/* Text and arrow section below video */}
-      <section className="w-full py-8 sm:py-12 md:py-16 lg:py-24 text-center px-4">
+      {/* Text and arrow section below video - gradient transition to gallery */}
+      <section 
+        className="w-full py-8 sm:py-12 md:py-16 lg:py-24 text-center px-4"
+        style={{
+          background: 'linear-gradient(to bottom, transparent 0%, transparent 70%, lab(84 -0.78 -7.93) 100%)'
+        }}
+      >
         <h2 
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-1 sm:mb-2 uppercase tracking-tight"
           style={{
