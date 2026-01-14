@@ -119,11 +119,13 @@ export default function MediaGallery() {
               {item.videoSrc ? (
                 <video
                   src={item.videoSrc}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover pointer-events-none [&::-webkit-media-controls]:hidden [&::-webkit-media-controls-enclosure]:hidden"
                   autoPlay
                   loop
                   muted
                   playsInline
+                  disablePictureInPicture
+                  controlsList="nodownload nofullscreen noremoteplayback"
                   title={item.videoTitle}
                 />
               ) : null}
