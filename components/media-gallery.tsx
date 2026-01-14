@@ -1,5 +1,101 @@
+"use client"
+
+import { useState, useRef, useEffect } from "react"
+
+interface GalleryItem {
+  id: number
+  videoSrc: string
+  videoTitle: string
+  imageSrc: string
+  imageAlt: string
+}
+
+function LazyVideo({ src, title }: { src: string; title: string }) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  // Intersection Observer for lazy loading
+  useEffect(() => {
+    const container = containerRef.current
+    if (!container) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true)
+            observer.unobserve(container)
+          }
+        })
+      },
+      {
+        rootMargin: "200px", // Start loading 200px before entering viewport
+        threshold: 0.1,
+      }
+    )
+
+    observer.observe(container)
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [])
+
+  // Play video when visible
+  useEffect(() => {
+    const video = videoRef.current
+    if (isVisible && video) {
+      video.play().catch(() => {
+        // Autoplay was prevented, that's okay
+      })
+    }
+  }, [isVisible])
+
+  return (
+    <div ref={containerRef} className="absolute inset-0">
+      {/* Loading placeholder */}
+      <div
+        className={`absolute inset-0 flex items-center justify-center transition-opacity duration-500 ${
+          isPlaying ? "opacity-0 pointer-events-none" : "opacity-100"
+        }`}
+        style={{ backgroundColor: 'lab(84 -0.78 -7.93)' }}
+      >
+        <div className="flex flex-col items-center gap-3">
+          <div className="w-10 h-10 border-3 border-gray-300 border-t-gray-500 rounded-full animate-spin" />
+          <span className="text-sm text-gray-500 font-medium">Loading video...</span>
+        </div>
+      </div>
+
+      {/* Video - only render when near viewport */}
+      {isVisible && (
+        <video
+          ref={videoRef}
+          src={src}
+          className={`absolute inset-0 w-full h-full object-cover pointer-events-none transition-opacity duration-500 [&::-webkit-media-controls]:hidden [&::-webkit-media-controls-enclosure]:hidden ${
+            isPlaying ? "opacity-100" : "opacity-0"
+          }`}
+          loop
+          muted
+          playsInline
+          preload="auto"
+          disablePictureInPicture
+          controlsList="nodownload nofullscreen noremoteplayback"
+          title={title}
+          onPlaying={() => setIsPlaying(true)}
+          onCanPlay={() => {
+            // Try to play as soon as it can
+            videoRef.current?.play().catch(() => {})
+          }}
+        />
+      )}
+    </div>
+  )
+}
+
 export default function MediaGallery() {
-  const galleryItems = [
+  const galleryItems: GalleryItem[] = [
     {
       id: 1,
       videoSrc: "/gallery-video/instrumed.mp4",
@@ -116,19 +212,7 @@ export default function MediaGallery() {
               className="relative aspect-[4/3] sm:aspect-video md:aspect-auto md:flex-1 md:w-1/2 overflow-hidden rounded-lg"
               style={{ backgroundColor: 'lab(84 -0.78 -7.93)' }}
             >
-              {item.videoSrc ? (
-                <video
-                  src={item.videoSrc}
-                  className="absolute inset-0 w-full h-full object-cover pointer-events-none [&::-webkit-media-controls]:hidden [&::-webkit-media-controls-enclosure]:hidden"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  disablePictureInPicture
-                  controlsList="nodownload nofullscreen noremoteplayback"
-                  title={item.videoTitle}
-                />
-              ) : null}
+              <LazyVideo src={item.videoSrc} title={item.videoTitle} />
             </div>
 
             {/* Image - Right Side */}
