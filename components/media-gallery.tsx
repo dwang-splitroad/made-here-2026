@@ -109,12 +109,11 @@ export default function MediaGallery() {
         return (
           <div 
             key={item.id} 
-            className="w-full flex flex-col md:flex-row py-16 md:py-24 px-4 md:px-8 lg:px-16 gap-4 md:gap-8"
-            style={{ minHeight: '85vh' }}
+            className="w-full flex flex-col md:flex-row py-6 sm:py-10 md:py-24 px-2 sm:px-4 md:px-8 lg:px-16 gap-3 sm:gap-5 md:gap-8 md:min-h-[85vh]"
           >
             {/* Video - Left Side */}
             <div 
-              className="relative flex-1 md:w-1/2 overflow-hidden rounded-lg"
+              className="relative aspect-[4/3] sm:aspect-video md:aspect-auto md:flex-1 md:w-1/2 overflow-hidden rounded-lg"
               style={{ backgroundColor: 'lab(84 -0.78 -7.93)' }}
             >
               {item.videoSrc ? (
@@ -131,11 +130,11 @@ export default function MediaGallery() {
             </div>
 
             {/* Image - Right Side */}
-            <div className="relative flex-1 md:w-1/2 bg-transparent flex items-center justify-center overflow-hidden rounded-lg">
+            <div className="relative aspect-[4/3] sm:aspect-video md:aspect-auto md:flex-1 md:w-1/2 bg-transparent flex items-center justify-center overflow-hidden rounded-lg">
               <img
                 src={item.imageSrc || "/placeholder.svg"}
                 alt={item.imageAlt}
-                className="max-w-full max-h-full object-contain p-8"
+                className="max-w-full max-h-full object-contain p-3 sm:p-5 md:p-8"
               />
             </div>
           </div>
