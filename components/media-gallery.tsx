@@ -62,10 +62,7 @@ function LazyVideo({ src, title }: { src: string; title: string }) {
         }`}
         style={{ backgroundColor: 'lab(84 -0.78 -7.93)' }}
       >
-        <div className="flex flex-col items-center gap-3">
-          <div className="w-10 h-10 border-3 border-gray-300 border-t-gray-500 rounded-full animate-spin" />
-          <span className="text-sm text-gray-500 font-medium">Loading video...</span>
-        </div>
+        <div className="w-10 h-10 border-3 border-gray-300 border-t-gray-500 rounded-full animate-spin" />
       </div>
 
       {/* Video - only render when near viewport */}
