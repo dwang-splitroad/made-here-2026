@@ -13,7 +13,7 @@ interface Tier {
 
 const tiers: Tier[] = [
   {
-    name: "Titanium",
+    name: "Titanium Sponsorship",
     price: "$10,000",
     highlight: true,
     benefits: [
@@ -27,7 +27,7 @@ const tiers: Tier[] = [
     ],
   },
   {
-    name: "Stainless Steel",
+    name: "Stainless Steel Sponsorship",
     price: "$7,500",
     benefits: [
       "Six (6) tickets to the event & dinner",
@@ -38,7 +38,7 @@ const tiers: Tier[] = [
     ],
   },
   {
-    name: "Nitinol",
+    name: "Nitinol Sponsorship",
     price: "$5,000",
     benefits: [
       "Four (4) tickets to the event & dinner",
@@ -47,7 +47,7 @@ const tiers: Tier[] = [
     ],
   },
   {
-    name: "Polyethylene",
+    name: "Polyethylene Sponsorship",
     price: "$2,500",
     benefits: [
       "Two (2) tickets to the event & dinner",
