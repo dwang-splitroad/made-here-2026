@@ -2,7 +2,7 @@ import Image from "next/image"
 import Footer from "@/components/footer"
 import SponsorTiers from "@/components/sponsor-tiers"
 
-const NAVY = "oklch(0.15 0.04 264)"
+const NAVY = "#26235d"
 const ORANGE = "lab(54.8% 66.8 56.8)"
 const FONT =
   'var(--font-roboto-condensed), "Avenir Next Condensed", "Avenir", -apple-system, BlinkMacSystemFont, sans-serif'
@@ -295,7 +295,7 @@ export default function Home() {
             alt="KEDCO – Kosciusko Economic Development Corporation"
             width={300}
             height={80}
-            className="w-48 h-auto object-contain"
+            className="w-72 h-auto object-contain"
           />
           <span className="hidden sm:inline text-muted-foreground text-2xl">|</span>
           <Image
@@ -303,7 +303,7 @@ export default function Home() {
             alt="OrthoWorx"
             width={200}
             height={80}
-            className="w-48 h-auto object-contain"
+            className="w-72 h-auto object-contain"
           />
         </div>
       </section>
