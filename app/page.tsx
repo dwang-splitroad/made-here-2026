@@ -144,6 +144,31 @@ export default function Home() {
                 ))}
               </ul>
             </div>
+
+            {/* 2025 Recap callout */}
+            <a
+              href="/2025"
+              className="mt-10 group flex items-center justify-between gap-4 rounded-xl border p-5 transition-colors hover:border-current"
+              style={{ borderColor: "oklch(0.88 0 0)" }}
+            >
+              <div>
+                <p
+                  className="text-lg font-black uppercase"
+                  style={{ fontFamily: FONT, color: NAVY }}
+                >
+                  Missed Last Year?
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Watch the recap & see the 2025 showcase
+                </p>
+              </div>
+              <span
+                className="text-2xl font-black shrink-0 transition-transform group-hover:translate-x-1"
+                style={{ color: ORANGE }}
+              >
+                →
+              </span>
+            </a>
           </div>
 
           {/* Right: About */}
