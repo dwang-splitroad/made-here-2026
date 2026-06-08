@@ -291,11 +291,11 @@ export default function Home() {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16">
           <Image
-            src="/kedco-logo.png"
+            src="/kedco-horizontal-logo.png"
             alt="KEDCO – Kosciusko Economic Development Corporation"
-            width={200}
+            width={300}
             height={80}
-            className="h-20 w-auto object-contain"
+            className="h-10 w-auto object-contain"
           />
           <span className="hidden sm:inline text-muted-foreground text-2xl">|</span>
           <Image
