@@ -192,7 +192,7 @@ export default function Home() {
                 className="text-xl font-black uppercase text-white mb-3"
                 style={{ fontFamily: FONT }}
               >
-                CNC Milling: Advanced Axis Milling
+                Advanced Axis CNC Milling
               </p>
               <p className="text-white/80 text-sm leading-relaxed">
                 Demonstrating how multi-axis precision machining enables complex geometries, tighter
