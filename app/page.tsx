@@ -64,13 +64,13 @@ export default function Home() {
 
         {/* Tags */}
         <div
-          className="mt-10 flex flex-wrap justify-center gap-2 sm:gap-0 sm:divide-x divide-white/30 rounded-full border border-white/20 px-6 py-3"
+          className="mt-10 flex flex-wrap justify-center gap-x-1 gap-y-1 sm:gap-0 sm:divide-x divide-white/30 rounded-2xl sm:rounded-full border border-white/20 px-4 sm:px-6 py-3"
           style={{ backgroundColor: "rgba(255,255,255,0.08)" }}
         >
           {["Networking", "Showcase", "Dinner", "After Party"].map((tag) => (
             <span
               key={tag}
-              className="px-4 py-0.5 text-sm sm:text-base font-bold uppercase tracking-wider text-white"
+              className="px-3 sm:px-4 py-0.5 text-xs sm:text-base font-bold uppercase tracking-wider text-white whitespace-nowrap"
               style={{ fontFamily: FONT }}
             >
               {tag}
@@ -209,7 +209,7 @@ export default function Home() {
           style={{ backgroundColor: NAVY }}
         >
           <p
-            className="text-white text-xl sm:text-2xl font-black uppercase tracking-widest"
+            className="text-white text-lg sm:text-2xl font-black uppercase tracking-wide sm:tracking-widest"
             style={{ fontFamily: FONT }}
           >
             The <span style={{ color: ORANGE }}>Orthopedic</span> Capital of the World®
@@ -252,11 +252,11 @@ export default function Home() {
             ].map(({ time, label }, i, arr) => (
               <div
                 key={time}
-                className="flex items-start gap-6 py-5"
+                className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-6 py-4 sm:py-5"
                 style={{ borderBottom: i < arr.length - 1 ? "1px solid oklch(0.88 0 0)" : "none" }}
               >
                 <span
-                  className="text-sm font-bold uppercase tracking-wide shrink-0 w-36 pt-0.5"
+                  className="text-sm font-bold uppercase tracking-wide shrink-0 sm:w-36 sm:pt-0.5"
                   style={{ color: ORANGE, fontFamily: FONT }}
                 >
                   {time}
@@ -289,7 +289,7 @@ export default function Home() {
         >
           Special Thanks to Event Hosts
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-10 sm:gap-16">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16">
           <Image
             src="/kedco-logo.png"
             alt="KEDCO – Kosciusko Economic Development Corporation"
@@ -297,7 +297,7 @@ export default function Home() {
             height={80}
             className="h-10 w-auto object-contain"
           />
-          <span className="text-muted-foreground text-2xl">|</span>
+          <span className="hidden sm:inline text-muted-foreground text-2xl">|</span>
           <Image
             src="/orthoworx-logo.png"
             alt="OrthoWorx"
