@@ -161,13 +161,13 @@ export default function SponsorTiers() {
           Become a Sponsor
         </a>
         <p className="text-sm text-muted-foreground">
-          Questions? Contact us at{" "}
-          <a
-            href="mailto:hello@splitroadmedia.com"
-            className="underline hover:no-underline"
-            style={{ color: NAVY }}
-          >
-            hello@splitroadmedia.com
+          Questions? Contact{" "}
+          <a href="mailto:madehereindiana@gmail.com" className="underline hover:no-underline" style={{ color: NAVY }}>
+            madehereindiana@gmail.com
+          </a>
+          {" "}or{" "}
+          <a href="mailto:info@kosciuskoedc.com" className="underline hover:no-underline" style={{ color: NAVY }}>
+            info@kosciuskoedc.com
           </a>
         </p>
       </div>
