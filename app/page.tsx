@@ -295,7 +295,7 @@ export default function Home() {
             alt="KEDCO – Kosciusko Economic Development Corporation"
             width={200}
             height={80}
-            className="h-14 sm:h-16 w-auto object-contain"
+            className="h-10 w-auto object-contain"
           />
           <span className="text-muted-foreground text-2xl">|</span>
           <Image
@@ -303,7 +303,7 @@ export default function Home() {
             alt="OrthoWorx"
             width={200}
             height={80}
-            className="h-14 sm:h-16 w-auto object-contain"
+            className="h-10 w-auto object-contain"
           />
         </div>
       </section>
