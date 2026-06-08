@@ -1,5 +1,5 @@
 const NAVY = "oklch(0.15 0.04 264)"
-const RED = "lab(54.8% 66.8 56.8)"
+const ORANGE = "lab(54.8% 66.8 56.8)"
 const FONT =
   'var(--font-roboto-condensed), "Avenir Next Condensed", "Avenir", -apple-system, BlinkMacSystemFont, sans-serif'
 
@@ -7,67 +7,64 @@ interface Tier {
   name: string
   price: string
   highlight?: boolean
+  description?: string
   benefits: string[]
 }
 
 const tiers: Tier[] = [
   {
-    name: "Title Sponsor",
+    name: "Titanium",
     price: "$10,000",
     highlight: true,
     benefits: [
-      "Exclusive title naming rights to the event",
-      "Premier booth placement",
-      "Logo on all event materials, signage, and digital media",
-      "Featured in press releases and social media campaigns",
-      "VIP table for 10 at the showcase",
-      "Speaking opportunity during the event",
-      "Full-page ad in the event program",
-      "Logo on event t-shirts",
-      "Post-event highlight video feature",
+      "Eight (8) tickets to the event & dinner",
+      "Reserved dinner table",
+      "Ability to showcase and have an exhibition table in a premium location",
+      "Priority logo placement on signage, website, and marketing materials",
+      "Recognition in the event program",
+      "Social media and digital promotion",
+      "Verbal recognition during event",
     ],
   },
   {
-    name: "Gold Sponsor",
+    name: "Stainless Steel",
+    price: "$7,500",
+    benefits: [
+      "Six (6) tickets to the event & dinner",
+      "Ability to showcase and have an exhibition table",
+      "Logo placement on signage, website, and marketing materials",
+      "Recognition in the event program",
+      "Social media mention",
+    ],
+  },
+  {
+    name: "Nitinol",
     price: "$5,000",
     benefits: [
-      "Logo on event signage and digital media",
-      "Prominent booth placement",
-      "Half-page ad in the event program",
-      "VIP table for 6 at the showcase",
-      "Logo on event t-shirts",
-      "Social media recognition",
-      "Post-event recap mention",
+      "Four (4) tickets to the event & dinner",
+      "Logo placement on signage and website",
+      "Recognition in the event program",
     ],
   },
   {
-    name: "Silver Sponsor",
+    name: "Polyethylene",
     price: "$2,500",
     benefits: [
-      "Logo on event signage",
-      "Booth space at the showcase",
-      "Quarter-page ad in the event program",
-      "4 tickets to the showcase",
-      "Social media recognition",
+      "Two (2) tickets to the event & dinner",
+      "Logo placement on signage and website",
+      "Recognition in the event program",
     ],
   },
   {
-    name: "Bronze Sponsor",
+    name: "Showcase Team",
     price: "$1,000",
+    description:
+      "Showcasing teams will have the opportunity to take the stage and showcase their capabilities, expertise, and unique value to the orthopedic ecosystem. Each team will mill a unique component to help tell their story. To highlight the collaborative spirit that makes the Orthopedic Capital of the World® unique, each team is encouraged to partner with 2–3 additional ecosystem companies in the production of their unique component.",
     benefits: [
-      "Name listed on event signage",
-      "2 tickets to the showcase",
-      "Name in the event program",
-      "Social media shout-out",
-    ],
-  },
-  {
-    name: "Supporter",
-    price: "$500",
-    benefits: [
-      "Name listed in the event program",
-      "2 tickets to the showcase",
-      "Social media recognition",
+      "Exhibition display booth",
+      "8-foot table",
+      "Black table cover (you may bring your own branded cover)",
+      "Two (2) tickets to the event and dinner",
     ],
   },
 ]
@@ -83,9 +80,9 @@ export default function SponsorTiers() {
           Become a Sponsor
         </h2>
         <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
-          Partner with Made Here 2026 and connect your brand with Indiana's
-          most innovative manufacturers. Sponsorships support the event and
-          showcase your commitment to local industry.
+          Partner with Made Here 2026 and connect your brand with Indiana's most
+          innovative manufacturers. Sponsorships support the event and showcase
+          your commitment to local industry.
         </p>
       </div>
 
@@ -95,20 +92,20 @@ export default function SponsorTiers() {
             key={tier.name}
             className="rounded-2xl border p-6 flex flex-col"
             style={{
-              borderColor: tier.highlight ? RED : "oklch(0.88 0 0)",
+              borderColor: tier.highlight ? ORANGE : "oklch(0.88 0 0)",
               borderWidth: tier.highlight ? 2 : 1,
-              backgroundColor: tier.highlight
-                ? "oklch(0.97 0.01 25)"
-                : "white",
+              backgroundColor: tier.highlight ? "oklch(0.97 0.01 25)" : "white",
             }}
           >
             <div className="mb-4">
-              <span
-                className="text-xs font-bold uppercase tracking-widest"
-                style={{ color: tier.highlight ? RED : "oklch(0.55 0.02 264)" }}
-              >
-                {tier.highlight ? "★ Featured" : "Sponsor"}
-              </span>
+              {tier.highlight && (
+                <span
+                  className="text-xs font-bold uppercase tracking-widest"
+                  style={{ color: ORANGE }}
+                >
+                  ★ Featured
+                </span>
+              )}
               <h3
                 className="text-2xl font-bold uppercase mt-1"
                 style={{ fontFamily: FONT, color: NAVY }}
@@ -117,16 +114,28 @@ export default function SponsorTiers() {
               </h3>
               <p
                 className="text-3xl font-bold mt-2"
-                style={{ color: tier.highlight ? RED : NAVY }}
+                style={{ color: tier.highlight ? ORANGE : NAVY }}
               >
                 {tier.price}
               </p>
             </div>
 
+            {tier.description && (
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                {tier.description}
+              </p>
+            )}
+
+            <p
+              className="text-xs font-bold uppercase tracking-wider mb-2"
+              style={{ color: NAVY }}
+            >
+              Includes:
+            </p>
             <ul className="flex-1 space-y-2 mb-6">
               {tier.benefits.map((b) => (
                 <li key={b} className="flex items-start gap-2 text-sm">
-                  <span style={{ color: RED }} className="mt-0.5 shrink-0">
+                  <span style={{ color: ORANGE }} className="mt-0.5 shrink-0">
                     ✓
                   </span>
                   <span className="text-muted-foreground">{b}</span>
