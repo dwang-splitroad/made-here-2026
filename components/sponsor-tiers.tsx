@@ -90,11 +90,21 @@ export default function SponsorTiers() {
         {tiers.map((tier) => (
           <div
             key={tier.name}
-            className="rounded-2xl border p-6 flex flex-col"
+            className="rounded-2xl border p-6 flex flex-col transition-all duration-200 cursor-pointer hover:-translate-y-1 hover:shadow-lg"
             style={{
               borderColor: tier.highlight ? ORANGE : "oklch(0.88 0 0)",
               borderWidth: tier.highlight ? 2 : 1,
               backgroundColor: tier.highlight ? "oklch(0.97 0.01 25)" : "white",
+            }}
+            onMouseEnter={e => {
+              const el = e.currentTarget
+              el.style.borderColor = ORANGE
+              el.style.borderWidth = "2px"
+            }}
+            onMouseLeave={e => {
+              const el = e.currentTarget
+              el.style.borderColor = tier.highlight ? ORANGE : "oklch(0.88 0 0)"
+              el.style.borderWidth = tier.highlight ? "2px" : "1px"
             }}
           >
             <div className="mb-4">
