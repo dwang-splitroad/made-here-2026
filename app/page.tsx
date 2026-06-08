@@ -274,6 +274,62 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Agenda ── */}
+      <section
+        className="py-16 sm:py-20 px-6"
+        style={{ backgroundColor: "oklch(0.97 0.005 264)" }}
+      >
+        <div className="max-w-2xl mx-auto">
+          <h2
+            className="text-4xl sm:text-5xl font-black uppercase text-center mb-10"
+            style={{ fontFamily: FONT, color: NAVY, letterSpacing: "0.02em" }}
+          >
+            Agenda
+          </h2>
+          <div className="space-y-0">
+            {[
+              { time: "3:00 – 5:30 p.m.", label: "Networking Event" },
+              { time: "5:45 p.m.", label: "Program, Dinner & Distinguished Panel" },
+              { time: "6:30 p.m.", label: "Showcase" },
+              { time: "8:40 p.m.", label: "Close" },
+              { time: "9:00 p.m.", label: "After-party at Anthology Whiskey Room" },
+            ].map(({ time, label }, i, arr) => (
+              <div
+                key={time}
+                className="flex items-start gap-6 py-5"
+                style={{
+                  borderBottom: i < arr.length - 1 ? "1px solid oklch(0.88 0 0)" : "none",
+                }}
+              >
+                <span
+                  className="text-sm font-bold uppercase tracking-wide shrink-0 w-36 pt-0.5"
+                  style={{ color: ORANGE, fontFamily: FONT }}
+                >
+                  {time}
+                </span>
+                <span
+                  className="text-lg font-bold uppercase"
+                  style={{ color: NAVY, fontFamily: FONT }}
+                >
+                  {label}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-sm text-muted-foreground text-center mt-8 italic">
+            * Dietary restriction? We'd love to accommodate.{" "}
+            <a
+              href="mailto:emacias-chavez@kosciuskoedc.com"
+              className="underline hover:no-underline"
+              style={{ color: NAVY }}
+            >
+              emacias-chavez@kosciuskoedc.com
+            </a>
+          </p>
+        </div>
+      </section>
+
       {/* ── Divider ── */}
       <div className="max-w-5xl mx-auto px-6">
         <hr style={{ borderColor: "oklch(0.88 0 0)" }} />
@@ -288,7 +344,7 @@ export default function Home() {
           className="text-sm font-bold uppercase tracking-widest mb-6"
           style={{ color: "oklch(0.55 0.02 264)", fontFamily: FONT }}
         >
-          Hosted By
+          Special Thanks to Event Hosts
         </p>
         <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-14">
           <span className="text-2xl sm:text-3xl font-black" style={{ color: NAVY, fontFamily: FONT }}>
