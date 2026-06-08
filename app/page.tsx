@@ -295,7 +295,7 @@ export default function Home() {
             alt="KEDCO – Kosciusko Economic Development Corporation"
             width={200}
             height={80}
-            className="h-[3.75rem] w-auto object-contain"
+            className="h-20 w-auto object-contain"
           />
           <span className="hidden sm:inline text-muted-foreground text-2xl">|</span>
           <Image
