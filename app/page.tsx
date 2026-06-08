@@ -50,7 +50,7 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <span className="text-2xl">📍</span>
             <span className="font-bold text-lg sm:text-xl text-left" style={{ fontFamily: FONT }}>
-              Manahan Orthopedic Capital Center® (MOCC)<br />
+              Manahan Orthopedic Capital Center (MOCC)<br />
               <span className="font-normal text-base opacity-80">Winona Lake, Indiana</span>
             </span>
           </div>
