@@ -346,14 +346,22 @@ export default function Home() {
         >
           Special Thanks to Event Hosts
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-14">
-          <span className="text-2xl sm:text-3xl font-black" style={{ color: NAVY, fontFamily: FONT }}>
-            KEDCO
-          </span>
+        <div className="flex flex-wrap items-center justify-center gap-10 sm:gap-16">
+          <Image
+            src="/kedco-logo.png"
+            alt="KEDCO – Kosciusko Economic Development Corporation"
+            width={200}
+            height={80}
+            className="h-14 sm:h-16 w-auto object-contain"
+          />
           <span className="text-muted-foreground text-2xl">|</span>
-          <span className="text-2xl sm:text-3xl font-black" style={{ color: NAVY, fontFamily: FONT }}>
-            Ortho<span style={{ color: ORANGE }}>Worx</span>
-          </span>
+          <Image
+            src="/orthoworx-logo.png"
+            alt="OrthoWorx"
+            width={200}
+            height={80}
+            className="h-14 sm:h-16 w-auto object-contain"
+          />
         </div>
       </section>
 
