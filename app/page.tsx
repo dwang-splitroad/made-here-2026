@@ -15,7 +15,7 @@ export default function Home() {
       <section
         className="relative flex flex-col items-center justify-center text-center px-6 py-16 sm:py-24"
         style={{
-          backgroundColor: "#182444",
+          backgroundColor: "#26235d",
         }}
       >
         <p
