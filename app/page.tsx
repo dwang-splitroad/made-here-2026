@@ -92,10 +92,10 @@ export default function Home() {
 
       {/* ── Why Attend + About ── */}
       <section className="max-w-5xl mx-auto px-6 py-16 sm:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
 
           {/* Left: Why Attend */}
-          <div>
+          <div className="flex flex-col">
             <h2
               className="text-4xl sm:text-5xl font-black uppercase mb-8"
               style={{ fontFamily: FONT, color: NAVY, letterSpacing: "0.02em" }}
@@ -148,25 +148,31 @@ export default function Home() {
             {/* 2025 Recap callout */}
             <a
               href="/2025"
-              className="mt-10 group flex items-center justify-between gap-4 rounded-xl border p-5 transition-colors hover:border-current"
-              style={{ borderColor: "oklch(0.88 0 0)" }}
+              className="mt-10 flex-1 group flex flex-col justify-center rounded-xl p-6 transition-opacity hover:opacity-90"
+              style={{ backgroundColor: ORANGE }}
             >
-              <div>
-                <p
-                  className="text-lg font-black uppercase"
-                  style={{ fontFamily: FONT, color: NAVY }}
-                >
-                  Missed Last Year?
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  Watch the recap & see the 2025 showcase
-                </p>
-              </div>
-              <span
-                className="text-2xl font-black shrink-0 transition-transform group-hover:translate-x-1"
-                style={{ color: ORANGE }}
+              <p
+                className="text-xs font-bold uppercase tracking-widest mb-1 text-white/90"
+                style={{ fontFamily: FONT }}
               >
-                →
+                Missed Last Year?
+              </p>
+              <p
+                className="text-2xl sm:text-3xl font-black uppercase text-white leading-tight mb-2"
+                style={{ fontFamily: FONT }}
+              >
+                Watch the 2025 Recap
+              </p>
+              <p className="text-white/90 text-sm leading-relaxed mb-4">
+                See last year&apos;s showcase, the participating companies, and
+                video highlights from the event.
+              </p>
+              <span
+                className="inline-flex items-center gap-2 text-white font-black uppercase text-sm tracking-wide"
+                style={{ fontFamily: FONT }}
+              >
+                View 2025 Showcase
+                <span className="text-lg transition-transform group-hover:translate-x-1">→</span>
               </span>
             </a>
           </div>
