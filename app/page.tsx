@@ -15,7 +15,7 @@ export default function Home() {
       <section
         className="relative flex flex-col items-center justify-center text-center px-6 py-16 sm:py-24"
         style={{
-          background: `linear-gradient(160deg, oklch(0.12 0.05 264) 0%, oklch(0.18 0.04 264) 60%, oklch(0.22 0.03 264) 100%)`,
+          backgroundColor: "#182444",
         }}
       >
         <p
