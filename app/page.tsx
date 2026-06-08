@@ -3,7 +3,7 @@ import Footer from "@/components/footer"
 import SponsorTiers from "@/components/sponsor-tiers"
 
 const NAVY = "oklch(0.15 0.04 264)"
-const RED = "oklch(0.55 0.22 25)"
+const RED = "lab(54.8% 66.8 56.8)"
 const FONT =
   'var(--font-roboto-condensed), "Avenir Next Condensed", "Avenir", -apple-system, BlinkMacSystemFont, sans-serif'
 
