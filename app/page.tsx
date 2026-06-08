@@ -148,6 +148,8 @@ export default function Home() {
             {/* 2025 Recap callout */}
             <a
               href="/2025"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-10 flex-1 group flex flex-col justify-center rounded-xl p-6 transition-opacity hover:opacity-90"
               style={{ backgroundColor: ORANGE }}
             >
