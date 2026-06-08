@@ -262,49 +262,60 @@ export default function Home() {
       </div>
 
       {/* ── Agenda ── */}
-      <section
-        className="py-16 sm:py-20 px-6"
-        style={{ backgroundColor: "oklch(0.97 0.005 264)" }}
-      >
-        <div className="max-w-2xl mx-auto">
-          <h2
-            className="text-4xl sm:text-5xl font-black uppercase text-center mb-10"
-            style={{ fontFamily: FONT, color: NAVY, letterSpacing: "0.02em" }}
-          >
-            Agenda
-          </h2>
-          <div className="space-y-0">
+      <section className="py-16 sm:py-24 px-6" style={{ backgroundColor: NAVY }}>
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <p
+              className="text-sm font-bold uppercase tracking-widest mb-2"
+              style={{ color: ORANGE, fontFamily: FONT }}
+            >
+              Schedule of Events
+            </p>
+            <h2
+              className="text-4xl sm:text-6xl font-black uppercase text-white"
+              style={{ fontFamily: FONT, letterSpacing: "0.02em" }}
+            >
+              Agenda
+            </h2>
+          </div>
+
+          <div className="space-y-3 sm:space-y-4">
             {[
               { time: "3:00 – 5:30 p.m.", label: "Networking Event" },
               { time: "5:45 p.m.", label: "Program, Dinner & Distinguished Panel" },
               { time: "6:30 p.m.", label: "Showcase" },
               { time: "8:40 p.m.", label: "Close" },
               { time: "9:00 p.m.", label: "After-party at Anthology Whiskey Room" },
-            ].map(({ time, label }, i, arr) => (
+            ].map(({ time, label }) => (
               <div
                 key={time}
-                className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-6 py-4 sm:py-5"
-                style={{ borderBottom: i < arr.length - 1 ? "1px solid oklch(0.88 0 0)" : "none" }}
+                className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-7 rounded-xl px-5 sm:px-7 py-4 sm:py-5 transition-colors hover:bg-white/10"
+                style={{
+                  backgroundColor: "rgba(255,255,255,0.05)",
+                  borderLeft: `5px solid ${ORANGE}`,
+                }}
               >
                 <span
-                  className="text-sm font-bold uppercase tracking-wide shrink-0 sm:w-36 sm:pt-0.5"
+                  className="text-2xl sm:text-3xl font-black shrink-0 sm:w-52 whitespace-nowrap"
                   style={{ color: ORANGE, fontFamily: FONT }}
                 >
                   {time}
                 </span>
-                <span className="text-lg font-bold uppercase" style={{ color: NAVY, fontFamily: FONT }}>
+                <span
+                  className="text-lg sm:text-2xl font-bold uppercase text-white leading-tight"
+                  style={{ fontFamily: FONT }}
+                >
                   {label}
                 </span>
               </div>
             ))}
           </div>
 
-          <p className="text-sm text-muted-foreground text-center mt-8 italic">
-            * Dietary restriction? We'd love to accommodate.{" "}
+          <p className="text-sm text-white/60 text-center mt-10 italic">
+            * Dietary restriction? We&apos;d love to accommodate.{" "}
             <a
               href="mailto:emacias-chavez@kosciuskoedc.com"
-              className="underline hover:no-underline"
-              style={{ color: NAVY }}
+              className="underline hover:no-underline text-white/90"
             >
               emacias-chavez@kosciuskoedc.com
             </a>
