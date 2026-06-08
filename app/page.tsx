@@ -33,7 +33,7 @@ export default function Home() {
         </h1>
 
         <Image
-          src="/2026-logo.png"
+          src="/made-here-logo-white.png"
           alt="Made Here: A Manufacturing Showcase 2026"
           width={300}
           height={390}
