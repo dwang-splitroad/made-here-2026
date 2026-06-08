@@ -14,9 +14,7 @@ export default function Home() {
       {/* ── Hero ── */}
       <section
         className="relative flex flex-col items-center justify-center text-center px-6 py-16 sm:py-24"
-        style={{
-          backgroundColor: "#26235d",
-        }}
+        style={{ backgroundColor: "#26235d" }}
       >
         <p
           className="text-sm sm:text-base font-bold uppercase tracking-widest mb-6"
@@ -86,137 +84,70 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
           className="mt-10 inline-block px-10 py-4 font-black uppercase text-xl rounded-xl transition-opacity hover:opacity-90"
-          style={{
-            fontFamily: FONT,
-            backgroundColor: ORANGE,
-            color: "white",
-            letterSpacing: "0.06em",
-          }}
+          style={{ fontFamily: FONT, backgroundColor: ORANGE, color: "white", letterSpacing: "0.06em" }}
         >
           Purchase Tickets
         </a>
       </section>
 
-      {/* ── About ── */}
-      <section className="max-w-4xl mx-auto px-6 py-16 sm:py-20">
-        <h2
-          className="text-4xl sm:text-5xl font-black uppercase text-center mb-8"
-          style={{ fontFamily: FONT, color: NAVY, letterSpacing: "0.02em" }}
-        >
-          About the Event
-        </h2>
-        <div className="space-y-5 text-base sm:text-lg text-muted-foreground leading-relaxed">
-          <p>
-            MADE HERE 2026 is a regional orthopedic manufacturing showcase bringing together the
-            Midwest's strongest orthopedic ecosystem with OEMs from across the country. Hosted by{" "}
-            <strong style={{ color: NAVY }}>Kosciusko Economic Development Corporation (KEDCO)</strong>{" "}
-            and <strong style={{ color: NAVY }}>OrthoWorx</strong>, this one-night showcase highlights
-            the depth, diversity, and technical excellence of orthopedic manufacturing capabilities
-            while celebrating that the epicenter of the industry remains Kosciusko County, Warsaw,
-            Indiana: <strong style={{ color: ORANGE }}>The Orthopedic Capital of the World®</strong>.
-          </p>
-          <p>
-            Building on the success of prior MADE HERE events, the 2026 showcase expands the lens
-            beyond county lines to emphasize the Midwest orthopedic manufacturing ecosystem,
-            reinforcing why this region continues to set the global standard for orthopedic
-            innovation, production, and scale.
-          </p>
-          <p>
-            We welcome OEMs from across the country and around the world, forging new relationships
-            and unlocking new possibilities within this vibrant ecosystem. Whether you're seeking a
-            strategic supplier, a technical partner, or a glimpse into the future of orthopedic
-            manufacturing, MADE HERE is where it begins.
-          </p>
-        </div>
-      </section>
-
-      {/* ── 2026 Technical Focus ── */}
-      <section
-        className="py-16 sm:py-20 px-6"
-        style={{ backgroundColor: "oklch(0.97 0.005 264)" }}
-      >
-        <div className="max-w-4xl mx-auto">
-          <p
-            className="text-sm font-bold uppercase tracking-widest mb-2"
-            style={{ color: ORANGE, fontFamily: FONT }}
-          >
-            2026 Technical Focus
-          </p>
-          <h2
-            className="text-3xl sm:text-4xl font-black uppercase mb-6"
-            style={{ fontFamily: FONT, color: NAVY }}
-          >
-            CNC Milling: Advanced Axis Milling
-          </h2>
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-8">
-            The 2026 MADE HERE showcase will spotlight <strong style={{ color: NAVY }}>Advanced Axis Milling</strong>,
-            demonstrating how multi-axis precision machining enables complex geometries, tighter
-            tolerances, improved throughput, and next-generation orthopedic solutions. From implants
-            to instrumentation and enabling technologies, attendees will experience firsthand how
-            axis milling capabilities are shaping the future of orthopedic manufacturing.
-          </p>
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-8">
-            Contract manufacturers ranging from legacy leaders to emerging innovators will showcase
-            applications, capacity, and scalability — positioning MADE HERE as a critical supplier
-            discovery and qualification event for OEMs.
-          </p>
-
-          <div
-            className="rounded-xl p-6 sm:p-8"
-            style={{ backgroundColor: NAVY }}
-          >
-            <p
-              className="text-white font-black uppercase text-lg sm:text-xl mb-4"
-              style={{ fontFamily: FONT }}
-            >
-              OEMs Can Expect:
-            </p>
-            <ul className="space-y-3">
-              {[
-                "Targeted networking with contract manufacturing teams",
-                "Dedicated booth showcases",
-                "Deeper technical sourcing conversations in a focused setting",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-white/90">
-                  <span style={{ color: ORANGE }} className="shrink-0 mt-0.5">✓</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Why Attend ── */}
+      {/* ── Why Attend + About ── */}
       <section className="max-w-5xl mx-auto px-6 py-16 sm:py-20">
-        <h2
-          className="text-4xl sm:text-5xl font-black uppercase text-center mb-12"
-          style={{ fontFamily: FONT, color: NAVY, letterSpacing: "0.02em" }}
-        >
-          Why Attend?
-        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="space-y-8">
-            {[
-              { icon: "👥", title: "Meet", sub: "Qualified Suppliers" },
-              { icon: "🔍", title: "Discover", sub: "New Manufacturing Partners" },
-              { icon: "🤝", title: "Connect", sub: "With Industry Leaders" },
-              { icon: "⚙️", title: "Experience", sub: "Ecosystem Intelligence & Insights" },
-            ].map(({ icon, title, sub }) => (
-              <div key={title} className="flex items-start gap-4">
-                <span className="text-3xl mt-0.5">{icon}</span>
-                <div>
-                  <p className="text-xl font-black uppercase" style={{ fontFamily: FONT, color: NAVY }}>
-                    {title}
-                  </p>
-                  <p className="text-muted-foreground">{sub}</p>
+          {/* Left: Why Attend */}
+          <div>
+            <h2
+              className="text-4xl sm:text-5xl font-black uppercase mb-8"
+              style={{ fontFamily: FONT, color: NAVY, letterSpacing: "0.02em" }}
+            >
+              Why Attend?
+            </h2>
+            <div className="space-y-7">
+              {[
+                { icon: "👥", title: "Meet", sub: "Qualified Suppliers" },
+                { icon: "🔍", title: "Discover", sub: "New Manufacturing Partners" },
+                { icon: "🤝", title: "Connect", sub: "With Industry Leaders" },
+                { icon: "⚙️", title: "Experience", sub: "Ecosystem Intelligence & Insights" },
+              ].map(({ icon, title, sub }) => (
+                <div key={title} className="flex items-start gap-4">
+                  <span className="text-3xl mt-0.5">{icon}</span>
+                  <div>
+                    <p className="text-xl font-black uppercase" style={{ fontFamily: FONT, color: NAVY }}>
+                      {title}
+                    </p>
+                    <p className="text-muted-foreground">{sub}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* Event Structure */}
+            <div className="mt-10">
+              <h3
+                className="text-xl font-black uppercase mb-4"
+                style={{ fontFamily: FONT, color: NAVY }}
+              >
+                Event Structure & Experience
+              </h3>
+              <ul className="space-y-2">
+                {[
+                  "Open Networking & Manufacturing Showcase",
+                  "Contract Manufacturing Exhibits",
+                  "Panel Discussion with Industry Leaders & World Renown Surgeon",
+                  "Ecosystem and Talent Visibility",
+                  "Regional Supplier and Capability Discovery",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <span style={{ color: ORANGE }} className="shrink-0 mt-0.5">✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          <div className="flex flex-col justify-center">
+          {/* Right: About */}
+          <div>
             <p
               className="text-3xl sm:text-4xl font-black uppercase leading-tight mb-6"
               style={{ fontFamily: FONT, color: NAVY }}
@@ -224,39 +155,51 @@ export default function Home() {
               Connect.<br />Collaborate.<br />
               <span style={{ color: ORANGE }}>Create What's Next.</span>
             </p>
-            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-              Join orthopedic OEMs, manufacturers, innovators, & suppliers for an exclusive evening
-              of networking, discovery, & industry leadership in the{" "}
-              <strong style={{ color: ORANGE }}>Orthopedic Capital of the World®</strong>.
-            </p>
-          </div>
-        </div>
+            <div className="space-y-4 text-base text-muted-foreground leading-relaxed">
+              <p>
+                MADE HERE 2026 is a regional orthopedic manufacturing showcase bringing together the
+                Midwest's strongest orthopedic ecosystem with OEMs from across the country. Hosted by{" "}
+                <strong style={{ color: NAVY }}>KEDCO</strong> and{" "}
+                <strong style={{ color: NAVY }}>OrthoWorx</strong>, this one-night showcase highlights
+                the depth, diversity, and technical excellence of orthopedic manufacturing while
+                celebrating that the epicenter of the industry remains Kosciusko County, Warsaw,
+                Indiana: <strong style={{ color: ORANGE }}>The Orthopedic Capital of the World®</strong>.
+              </p>
+              <p>
+                Building on the success of prior MADE HERE events, the 2026 showcase expands the lens
+                beyond county lines to emphasize the Midwest orthopedic manufacturing ecosystem,
+                reinforcing why this region continues to set the global standard for orthopedic
+                innovation, production, and scale.
+              </p>
+              <p>
+                Whether you're seeking a strategic supplier, a technical partner, or a glimpse into
+                the future of orthopedic manufacturing, MADE HERE is where it begins.
+              </p>
+            </div>
 
-        {/* Event Structure */}
-        <div className="mt-14">
-          <h3
-            className="text-2xl sm:text-3xl font-black uppercase mb-6 text-center"
-            style={{ fontFamily: FONT, color: NAVY }}
-          >
-            Event Structure & Experience
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              { icon: "🤝", label: "Open Networking & Manufacturing Showcase" },
-              { icon: "🏭", label: "Contract Manufacturing Exhibits" },
-              { icon: "🎤", label: "Panel Discussion with Industry Leaders & World Renown Surgeon" },
-              { icon: "🌐", label: "Ecosystem and Talent Visibility" },
-              { icon: "🔎", label: "Regional Supplier and Capability Discovery" },
-            ].map(({ icon, label }) => (
-              <div
-                key={label}
-                className="flex items-start gap-3 rounded-xl border p-4"
-                style={{ borderColor: "oklch(0.88 0 0)" }}
+            {/* 2026 Technical Focus */}
+            <div
+              className="mt-8 rounded-xl p-6"
+              style={{ backgroundColor: NAVY }}
+            >
+              <p
+                className="text-xs font-bold uppercase tracking-widest mb-1"
+                style={{ color: ORANGE, fontFamily: FONT }}
               >
-                <span className="text-2xl shrink-0">{icon}</span>
-                <p className="text-sm font-semibold" style={{ color: NAVY }}>{label}</p>
-              </div>
-            ))}
+                2026 Technical Focus
+              </p>
+              <p
+                className="text-xl font-black uppercase text-white mb-3"
+                style={{ fontFamily: FONT }}
+              >
+                CNC Milling: Advanced Axis Milling
+              </p>
+              <p className="text-white/80 text-sm leading-relaxed">
+                Demonstrating how multi-axis precision machining enables complex geometries, tighter
+                tolerances, improved throughput, and next-generation orthopedic solutions — from
+                implants to instrumentation and enabling technologies.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -273,6 +216,19 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      {/* ── Divider ── */}
+      <div className="max-w-5xl mx-auto px-6">
+        <hr style={{ borderColor: "oklch(0.88 0 0)" }} />
+      </div>
+
+      {/* ── Sponsorship ── */}
+      <SponsorTiers />
+
+      {/* ── Divider ── */}
+      <div className="max-w-5xl mx-auto px-6">
+        <hr style={{ borderColor: "oklch(0.88 0 0)" }} />
+      </div>
 
       {/* ── Agenda ── */}
       <section
@@ -297,9 +253,7 @@ export default function Home() {
               <div
                 key={time}
                 className="flex items-start gap-6 py-5"
-                style={{
-                  borderBottom: i < arr.length - 1 ? "1px solid oklch(0.88 0 0)" : "none",
-                }}
+                style={{ borderBottom: i < arr.length - 1 ? "1px solid oklch(0.88 0 0)" : "none" }}
               >
                 <span
                   className="text-sm font-bold uppercase tracking-wide shrink-0 w-36 pt-0.5"
@@ -307,10 +261,7 @@ export default function Home() {
                 >
                   {time}
                 </span>
-                <span
-                  className="text-lg font-bold uppercase"
-                  style={{ color: NAVY, fontFamily: FONT }}
-                >
+                <span className="text-lg font-bold uppercase" style={{ color: NAVY, fontFamily: FONT }}>
                   {label}
                 </span>
               </div>
@@ -329,14 +280,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-
-      {/* ── Divider ── */}
-      <div className="max-w-5xl mx-auto px-6">
-        <hr style={{ borderColor: "oklch(0.88 0 0)" }} />
-      </div>
-
-      {/* ── Sponsorship ── */}
-      <SponsorTiers />
 
       {/* ── Hosted By ── */}
       <section className="py-12 px-6 text-center border-t" style={{ borderColor: "oklch(0.88 0 0)" }}>
