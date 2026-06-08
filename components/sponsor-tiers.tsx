@@ -1,3 +1,5 @@
+"use client"
+
 const NAVY = "oklch(0.15 0.04 264)"
 const ORANGE = "lab(54.8% 66.8 56.8)"
 const FONT =
