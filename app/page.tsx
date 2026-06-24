@@ -91,8 +91,8 @@ export default function Home() {
           </a>
           <a
             href="#sponsorship"
-            className="inline-block px-10 py-4 font-black uppercase text-xl rounded-xl border-2 transition-colors hover:bg-white/10"
-            style={{ fontFamily: FONT, borderColor: ORANGE, color: "white", letterSpacing: "0.06em" }}
+            className="inline-block px-10 py-4 font-black uppercase text-xl rounded-xl transition-opacity hover:opacity-90"
+            style={{ fontFamily: FONT, backgroundColor: ORANGE, color: "white", letterSpacing: "0.06em" }}
           >
             Sponsorship
           </a>
