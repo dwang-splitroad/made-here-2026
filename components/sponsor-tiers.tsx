@@ -73,7 +73,7 @@ const tiers: Tier[] = [
 
 export default function SponsorTiers() {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-12">
+    <section id="sponsorship" className="max-w-6xl mx-auto px-6 py-12 scroll-mt-8">
       <div className="text-center mb-10">
         <h2
           className="text-4xl sm:text-5xl font-bold uppercase mb-3"

@@ -78,16 +78,25 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Ticket CTA */}
-        <a
-          href="https://www.zeffy.com/en-US/ticketing/made-here-manufacturing-showcase-2026-draft"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-10 inline-block px-10 py-4 font-black uppercase text-xl rounded-xl transition-opacity hover:opacity-90"
-          style={{ fontFamily: FONT, backgroundColor: ORANGE, color: "white", letterSpacing: "0.06em" }}
-        >
-          Purchase Tickets
-        </a>
+        {/* CTAs */}
+        <div className="mt-10 flex flex-col sm:flex-row items-center gap-4">
+          <a
+            href="https://www.zeffy.com/en-US/ticketing/made-here-manufacturing-showcase-2026-draft"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-10 py-4 font-black uppercase text-xl rounded-xl transition-opacity hover:opacity-90"
+            style={{ fontFamily: FONT, backgroundColor: ORANGE, color: "white", letterSpacing: "0.06em" }}
+          >
+            Purchase Tickets
+          </a>
+          <a
+            href="#sponsorship"
+            className="inline-block px-10 py-4 font-black uppercase text-xl rounded-xl border-2 transition-colors hover:bg-white/10"
+            style={{ fontFamily: FONT, borderColor: ORANGE, color: "white", letterSpacing: "0.06em" }}
+          >
+            Sponsorship
+          </a>
+        </div>
       </section>
 
       {/* ── Why Attend + About ── */}
@@ -312,16 +321,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-
-          <p className="text-sm text-white/60 text-center mt-10 italic">
-            * Dietary restriction? We&apos;d love to accommodate.{" "}
-            <a
-              href="mailto:emacias-chavez@kosciuskoedc.com"
-              className="underline hover:no-underline text-white/90"
-            >
-              emacias-chavez@kosciuskoedc.com
-            </a>
-          </p>
         </div>
       </section>
 
@@ -331,7 +330,7 @@ export default function Home() {
           className="text-sm font-bold uppercase tracking-widest mb-6"
           style={{ color: "oklch(0.55 0.02 264)", fontFamily: FONT }}
         >
-          Special Thanks to Event Hosts
+          Hosted By
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16">
           <Image
@@ -346,6 +345,15 @@ export default function Home() {
             src="/orthoworx-logo.png"
             alt="OrthoWorx"
             width={200}
+            height={80}
+            className="w-72 h-auto object-contain"
+          />
+        </div>
+        <div className="flex justify-center mt-8 sm:mt-10">
+          <Image
+            src="/priority-medical-logo.png"
+            alt="Priority Medical – First Things First"
+            width={300}
             height={80}
             className="w-72 h-auto object-contain"
           />
