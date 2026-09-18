@@ -21,7 +21,7 @@ const avenirCondensed = {
 
 export const metadata: Metadata = {
   title: "Made Here 2026 | A Manufacturing Showcase",
-  description: "December 9, 2026 at the Manahan Orthopedic Capital Center® in Winona Lake, Indiana. An exclusive evening of networking, discovery, and industry leadership in the Orthopedic Capital of the World®.",
+  description: "December 9, 2026 at the Manahan Orthopaedic Capital Center® in Winona Lake, Indiana. An exclusive evening of networking, discovery, and industry leadership in the Orthopedic Capital of the World®.",
   generator: "v0.app",
   icons: {
     icon: [
