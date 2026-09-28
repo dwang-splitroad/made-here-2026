@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Footer from "@/components/footer"
 import SponsorTiers from "@/components/sponsor-tiers"
+import SiteMenu from "@/components/site-menu"
 
 const NAVY = "#26235d"
 const ORANGE = "lab(54.8% 66.8 56.8)"
@@ -10,6 +11,7 @@ const FONT =
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
+      <SiteMenu />
 
       {/* ── Hero ── */}
       <section
@@ -273,7 +275,7 @@ export default function Home() {
       </div>
 
       {/* ── Agenda ── */}
-      <section className="py-16 sm:py-24 px-6" style={{ backgroundColor: NAVY }}>
+      <section id="agenda" className="py-16 sm:py-24 px-6 scroll-mt-8" style={{ backgroundColor: NAVY }}>
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <p
