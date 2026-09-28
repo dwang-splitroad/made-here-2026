@@ -349,13 +349,41 @@ export default function Home() {
             className="w-72 h-auto object-contain"
           />
         </div>
-        <div className="flex justify-center mt-8 sm:mt-10">
+        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 mt-8 sm:mt-10 max-w-5xl mx-auto">
           <Image
             src="/priority-medical-logo.png"
             alt="Priority Medical – First Things First"
-            width={300}
-            height={80}
+            width={1200}
+            height={150}
             className="w-72 h-auto object-contain"
+          />
+          <Image
+            src="/jpmorgan-chase-logo.png"
+            alt="JPMorgan Chase & Co."
+            width={3840}
+            height={2160}
+            className="h-24 w-auto object-contain"
+          />
+          <Image
+            src="/network-partners-group-logo.jpg"
+            alt="NPG – Network Partners Group"
+            width={800}
+            height={125}
+            className="w-64 h-auto object-contain"
+          />
+          <Image
+            src="/arco-design-build-logo.png"
+            alt="ARCO Design/Build"
+            width={584}
+            height={277}
+            className="h-16 w-auto object-contain"
+          />
+          <Image
+            src="/precision-medical-technologies-logo.png"
+            alt="Precision Medical Technologies"
+            width={233}
+            height={186}
+            className="h-20 w-auto object-contain"
           />
         </div>
       </section>
