@@ -203,8 +203,9 @@ export default function Home() {
               <p>
                 MADE HERE 2026 is a regional orthopedic manufacturing showcase bringing together the
                 Midwest's strongest orthopedic ecosystem with OEMs from across the country. Hosted by{" "}
-                <strong style={{ color: NAVY }}>KEDCO</strong> and{" "}
-                <strong style={{ color: NAVY }}>OrthoWorx</strong>, this one-night showcase highlights
+                <strong style={{ color: NAVY }}>KEDCO</strong>,{" "}
+                <strong style={{ color: NAVY }}>OrthoWorx</strong>, and{" "}
+                <strong style={{ color: NAVY }}>Priority Medical</strong>, this one-night showcase highlights
                 the depth, diversity, and technical excellence of orthopedic manufacturing while
                 celebrating that the epicenter of the industry remains Kosciusko County, Warsaw,
                 Indiana: <strong style={{ color: ORANGE }}>The Orthopedic Capital of the World®</strong>.
@@ -334,7 +335,7 @@ export default function Home() {
         >
           Hosted By
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16">
+        <div className="flex flex-col xl:flex-row items-center justify-center gap-8 xl:gap-12">
           <Image
             src="/kedco-horizontal-logo.png"
             alt="KEDCO – Kosciusko Economic Development Corporation"
@@ -342,7 +343,7 @@ export default function Home() {
             height={80}
             className="w-60 h-auto object-contain"
           />
-          <span className="hidden sm:inline text-muted-foreground text-2xl">|</span>
+          <span className="hidden xl:inline text-muted-foreground text-2xl">|</span>
           <Image
             src="/orthoworx-logo.png"
             alt="OrthoWorx"
@@ -350,8 +351,7 @@ export default function Home() {
             height={80}
             className="w-72 h-auto object-contain"
           />
-        </div>
-        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 mt-8 sm:mt-10 max-w-5xl mx-auto">
+          <span className="hidden xl:inline text-muted-foreground text-2xl">|</span>
           <Image
             src="/priority-medical-logo.png"
             alt="Priority Medical – First Things First"
@@ -359,6 +359,14 @@ export default function Home() {
             height={150}
             className="w-72 h-auto object-contain"
           />
+        </div>
+        <p
+          className="text-sm font-bold uppercase tracking-widest mt-12 mb-6"
+          style={{ color: "oklch(0.55 0.02 264)", fontFamily: FONT }}
+        >
+          Sponsored By
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 max-w-5xl mx-auto">
           <Image
             src="/jpmorgan-chase-logo.png"
             alt="JPMorgan Chase & Co."
