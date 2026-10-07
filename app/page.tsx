@@ -83,6 +83,13 @@ const sponsorTiers: { label: string; sponsors: Sponsor[] }[] = [
         height: 356,
         className: "h-12 w-auto",
       },
+      {
+        name: "Illumina Strategy Group",
+        src: "/illumina-strategy-group-logo.png",
+        width: 1408,
+        height: 388,
+        className: "h-14 w-auto",
+      },
     ],
   },
 ]
