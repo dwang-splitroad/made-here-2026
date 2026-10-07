@@ -8,6 +8,85 @@ const ORANGE = "lab(54.8% 66.8 56.8)"
 const FONT =
   'var(--font-roboto-condensed), "Avenir Next Condensed", "Avenir", -apple-system, BlinkMacSystemFont, sans-serif'
 
+type Sponsor = {
+  name: string
+  src?: string
+  alt?: string
+  width?: number
+  height?: number
+  className?: string
+}
+
+const sponsorTiers: { label: string; sponsors: Sponsor[] }[] = [
+  {
+    label: "After-Party Sponsor",
+    sponsors: [
+      {
+        name: "JPMorgan Chase",
+        src: "/jpmorgan-chase-logo.png",
+        alt: "JPMorgan Chase & Co.",
+        width: 3840,
+        height: 2160,
+        className: "h-24 w-auto",
+      },
+    ],
+  },
+  {
+    label: "Titanium Sponsors",
+    sponsors: [
+      {
+        name: "1Factory",
+        src: "/1factory-logo.png",
+        width: 960,
+        height: 340,
+        className: "h-16 w-auto",
+      },
+      {
+        name: "Precision Medical Technologies",
+        src: "/precision-medical-technologies-logo.png",
+        width: 233,
+        height: 186,
+        className: "h-20 w-auto",
+      },
+      {
+        name: "Network Partners Group",
+        src: "/network-partners-group-logo.jpg",
+        alt: "NPG – Network Partners Group",
+        width: 800,
+        height: 125,
+        className: "w-64 h-auto",
+      },
+    ],
+  },
+  {
+    label: "Stainless Steel Sponsor",
+    sponsors: [
+      // Logo not yet received per KEDCO (9/30) – text placeholder until it arrives
+      { name: "Viant Medical" },
+    ],
+  },
+  {
+    label: "Polyethylene Sponsors",
+    sponsors: [
+      {
+        name: "ARCO Design/Build",
+        src: "/arco-design-build-logo.png",
+        width: 584,
+        height: 277,
+        className: "h-16 w-auto",
+      },
+      {
+        name: "Micropulse",
+        src: "/micropulse-logo.png",
+        alt: "Micropulse Incorporated",
+        width: 1730,
+        height: 356,
+        className: "h-12 w-auto",
+      },
+    ],
+  },
+]
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
@@ -361,40 +440,44 @@ export default function Home() {
           />
         </div>
         <p
-          className="text-sm font-bold uppercase tracking-widest mt-12 mb-6"
+          className="text-sm font-bold uppercase tracking-widest mt-12 mb-10"
           style={{ color: "oklch(0.55 0.02 264)", fontFamily: FONT }}
         >
           Sponsored By
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 max-w-5xl mx-auto">
-          <Image
-            src="/jpmorgan-chase-logo.png"
-            alt="JPMorgan Chase & Co."
-            width={3840}
-            height={2160}
-            className="h-24 w-auto object-contain"
-          />
-          <Image
-            src="/network-partners-group-logo.jpg"
-            alt="NPG – Network Partners Group"
-            width={800}
-            height={125}
-            className="w-64 h-auto object-contain"
-          />
-          <Image
-            src="/arco-design-build-logo.png"
-            alt="ARCO Design/Build"
-            width={584}
-            height={277}
-            className="h-16 w-auto object-contain"
-          />
-          <Image
-            src="/precision-medical-technologies-logo.png"
-            alt="Precision Medical Technologies"
-            width={233}
-            height={186}
-            className="h-20 w-auto object-contain"
-          />
+        <div className="flex flex-col gap-12 max-w-5xl mx-auto">
+          {sponsorTiers.map((tier) => (
+            <div key={tier.label}>
+              <p
+                className="text-xs font-bold uppercase tracking-[0.2em] mb-5"
+                style={{ color: NAVY, fontFamily: FONT }}
+              >
+                {tier.label}
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+                {tier.sponsors.map((sp) =>
+                  sp.src ? (
+                    <Image
+                      key={sp.name}
+                      src={sp.src}
+                      alt={sp.alt ?? sp.name}
+                      width={sp.width}
+                      height={sp.height}
+                      className={`${sp.className} object-contain`}
+                    />
+                  ) : (
+                    <span
+                      key={sp.name}
+                      className="text-2xl font-bold tracking-tight"
+                      style={{ color: NAVY, fontFamily: FONT }}
+                    >
+                      {sp.name}
+                    </span>
+                  ),
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
