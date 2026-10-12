@@ -61,8 +61,14 @@ const sponsorTiers: { label: string; sponsors: Sponsor[] }[] = [
   {
     label: "Stainless Steel Sponsor",
     sponsors: [
-      // Logo not yet received per KEDCO (9/30) – text placeholder until it arrives
-      { name: "Viant Medical" },
+      {
+        name: "Viant Medical",
+        src: "/viant-medical-logo.png",
+        alt: "Viant – We're in it for life.",
+        width: 1139,
+        height: 967,
+        className: "h-28 w-auto",
+      },
     ],
   },
   {
