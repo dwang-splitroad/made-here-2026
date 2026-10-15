@@ -12,41 +12,58 @@ type Sponsor = {
   name: string
   src?: string
   alt?: string
+  /** Intrinsic pixel size of the (padding-trimmed) logo file */
   width?: number
   height?: number
-  className?: string
 }
 
-const sponsorTiers: { label: string; sponsors: Sponsor[] }[] = [
+type SponsorTier = {
+  label: string
+  /**
+   * Visual weight for every logo in the tier: the geometric mean of the rendered
+   * width and height in px. Equal weight ≈ equal perceived size regardless of
+   * aspect ratio. Step the number down per tier so the hierarchy reads at a glance.
+   */
+  weight: number
+  /** Clamps so very tall or very wide logos don't blow out the row */
+  maxHeight: number
+  maxWidth: number
+  sponsors: Sponsor[]
+}
+
+const sponsorTiers: SponsorTier[] = [
   {
     label: "After-Party Sponsor",
+    weight: 150,
+    maxHeight: 110,
+    maxWidth: 360,
     sponsors: [
       {
         name: "JPMorgan Chase",
         src: "/jpmorgan-chase-logo.png",
         alt: "JPMorgan Chase & Co.",
-        width: 3840,
-        height: 2160,
-        className: "h-24 w-auto",
+        width: 1600,
+        height: 454,
       },
     ],
   },
   {
     label: "Titanium Sponsors",
+    weight: 140,
+    maxHeight: 110,
+    maxWidth: 340,
     sponsors: [
       {
         name: "1Factory",
         src: "/1factory-logo.png",
         width: 960,
         height: 340,
-        className: "h-16 w-auto",
       },
       {
         name: "Precision Medical Technologies",
         src: "/precision-medical-technologies-logo.png",
-        width: 233,
-        height: 186,
-        className: "h-20 w-auto",
+        width: 215,
+        height: 156,
       },
       {
         name: "Network Partners Group",
@@ -54,12 +71,14 @@ const sponsorTiers: { label: string; sponsors: Sponsor[] }[] = [
         alt: "NPG – Network Partners Group",
         width: 800,
         height: 125,
-        className: "w-64 h-auto",
       },
     ],
   },
   {
     label: "Stainless Steel Sponsor",
+    weight: 105,
+    maxHeight: 80,
+    maxWidth: 260,
     sponsors: [
       {
         name: "Viant Medical",
@@ -67,19 +86,20 @@ const sponsorTiers: { label: string; sponsors: Sponsor[] }[] = [
         alt: "Viant",
         width: 470,
         height: 86,
-        className: "h-14 w-auto",
       },
     ],
   },
   {
     label: "Polyethylene Sponsors",
+    weight: 80,
+    maxHeight: 60,
+    maxWidth: 190,
     sponsors: [
       {
         name: "ARCO Design/Build",
         src: "/arco-design-build-logo.png",
         width: 584,
-        height: 277,
-        className: "h-16 w-auto",
+        height: 253,
       },
       {
         name: "Micropulse",
@@ -87,18 +107,25 @@ const sponsorTiers: { label: string; sponsors: Sponsor[] }[] = [
         alt: "Micropulse Incorporated",
         width: 1730,
         height: 356,
-        className: "h-12 w-auto",
       },
       {
         name: "Illumina Strategy Group",
         src: "/illumina-strategy-group-logo.png",
-        width: 1408,
-        height: 388,
-        className: "h-14 w-auto",
+        width: 1392,
+        height: 372,
       },
     ],
   },
 ]
+
+/** Rendered width (px) for a logo so its visual weight matches its tier. */
+function logoWidth(sp: Sponsor, tier: SponsorTier) {
+  if (!sp.width || !sp.height) return tier.maxWidth
+  const ratio = sp.width / sp.height
+  let w = tier.weight * Math.sqrt(ratio)
+  w = Math.min(w, tier.maxWidth, tier.maxHeight * ratio)
+  return Math.round(w)
+}
 
 export default function Home() {
   return (
@@ -458,16 +485,16 @@ export default function Home() {
         >
           Sponsored By
         </p>
-        <div className="flex flex-col gap-12 max-w-5xl mx-auto">
-          {sponsorTiers.map((tier) => (
+        <div className="flex flex-col gap-14 max-w-5xl mx-auto">
+          {sponsorTiers.map((tier, i) => (
             <div key={tier.label}>
               <p
-                className="text-xs font-bold uppercase tracking-[0.2em] mb-5"
-                style={{ color: NAVY, fontFamily: FONT }}
+                className={`font-bold uppercase tracking-[0.2em] mb-6 ${i < 2 ? "text-sm" : "text-xs"}`}
+                style={{ color: i < 2 ? NAVY : "oklch(0.45 0.02 264)", fontFamily: FONT }}
               >
                 {tier.label}
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+              <div className="flex flex-wrap items-center justify-center gap-x-14 gap-y-8 px-4">
                 {tier.sponsors.map((sp) =>
                   sp.src ? (
                     <Image
@@ -476,7 +503,8 @@ export default function Home() {
                       alt={sp.alt ?? sp.name}
                       width={sp.width}
                       height={sp.height}
-                      className={`${sp.className} object-contain`}
+                      className="h-auto max-w-full object-contain"
+                      style={{ width: logoWidth(sp, tier) }}
                     />
                   ) : (
                     <span
