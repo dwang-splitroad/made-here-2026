@@ -114,6 +114,25 @@ const sponsorTiers: SponsorTier[] = [
         width: 1392,
         height: 372,
       },
+      {
+        name: "Lake City Logistics",
+        src: "/lake-city-logistics-logo.png",
+        width: 298,
+        height: 87,
+      },
+      // TODO: swap to logo once Assurance Technologies sends one
+      { name: "Assurance Technologies Inc." },
+    ],
+  },
+  {
+    label: "Supporting Sponsors",
+    weight: 60,
+    maxHeight: 44,
+    maxWidth: 150,
+    sponsors: [
+      { name: "Amnovis" },
+      { name: "Lewis Salvage" },
+      { name: "DANCO" },
     ],
   },
 ]

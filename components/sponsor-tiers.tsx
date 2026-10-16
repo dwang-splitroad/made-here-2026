@@ -58,6 +58,15 @@ const tiers: Tier[] = [
     ],
   },
   {
+    name: "Supporting Sponsorship",
+    price: "$1,000",
+    benefits: [
+      "Two (2) tickets to the event & dinner",
+      "Name on website",
+      "Recognition in the event program",
+    ],
+  },
+  {
     name: "Showcase Team",
     price: "$1,000",
     description:
