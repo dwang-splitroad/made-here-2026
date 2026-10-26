@@ -16,14 +16,13 @@ Confirmed bios came from the organizers' doc "Brief bio Showcasing" (Kayla Baile
 | P2 Precision | p2precision.com | confirmed | Resolved: "P2" = P2 Precision, Pierceton IN |
 | Precision Medical Technologies | premedtec.com | confirmed | Fixed typo "and well as" → "as well as" |
 | Qualitex | qualitexne.com | confirmed | Tolerance symbol rendered as ± (garbled in the .docx) |
-| Rayco Steel Process | raycosteelprocess.com | **pending** | Kayla: use last year's bio. Not found in this repo; site quote used for now |
+| Rayco Steel Process | raycosteelprocess.com | **pending** | Using last year's 2025 card bullets per Kayla (from public/gallery-images) |
 | Red Star Contract Manufacturing | redstarcontractmfg.com | confirmed | Added missing final period |
-| Tecomet | tecomet.com | **pending** | Kayla: use last year's bio. Not found in this repo; site quote used for now |
+| Tecomet | tecomet.com | **pending** | Using last year's 2025 card bullets per Kayla; "Salable" rendered as "Scalable" |
 | TriPoint Surgical | tripointsurgical.com | confirmed | Shortened from the doc version using its own sentences |
 
 ## Open items
-- **Last year's bios for Tecomet and Rayco** – the 2025 page in this repo only has video/photo galleries, no bios. If they exist elsewhere, paste them and they'll replace the site quotes.
-- **Showcasing company logos** – none received yet. All 14 needed. The page already has a slot for them (`logo` field).
+- **Showcasing company logos** – 9 of 14 are on the page, cropped from the 2025 showcase cards (≈650px wide, fine for the cards but not print quality). Still need: **GCG Industries, Jatex, LH Medical, P2 Precision, Red Star Contract Manufacturing**. Higher-res/vector versions of the other nine welcome.
 - **Four pending companies** – Kayla gave them until EOB 10/24 and will follow up Monday 10/27.
 
 ## Decisions made (from Kayla's doc)

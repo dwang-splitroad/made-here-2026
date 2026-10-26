@@ -1,3 +1,4 @@
+import type React from "react"
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
@@ -25,8 +26,8 @@ function hostname(url: string) {
   }
 }
 
-/** Renders `**bold**` spans inside a bio string. */
-function renderBio(text: string) {
+/** Renders `**bold**` spans inside a string. */
+function renderInline(text: string) {
   return text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
     part.startsWith("**") && part.endsWith("**") ? (
       <strong key={i} className="font-bold" style={{ color: NAVY }}>
@@ -36,6 +37,21 @@ function renderBio(text: string) {
       <span key={i}>{part}</span>
     ),
   )
+}
+
+/** A bio is either a paragraph or, when every line starts with "- ", a bullet list. */
+function renderBio(text: string) {
+  const lines = text.split("\n")
+  if (lines.length > 1 && lines.every((l) => l.startsWith("- "))) {
+    return (
+      <ul className="list-disc pl-4 space-y-1.5 marker:text-[color:var(--bullet)]" style={{ "--bullet": ORANGE } as React.CSSProperties}>
+        {lines.map((l, i) => (
+          <li key={i}>{renderInline(l.slice(2))}</li>
+        ))}
+      </ul>
+    )
+  }
+  return renderInline(text)
 }
 
 export default function CompaniesPage() {
@@ -99,7 +115,7 @@ export default function CompaniesPage() {
                   alt={c.name}
                   width={c.logo.width}
                   height={c.logo.height}
-                  className="h-12 w-auto max-w-[200px] object-contain object-left mb-3"
+                  className="h-14 w-auto max-w-[220px] object-contain object-left mb-4"
                 />
               ) : null}
               <h2
@@ -109,9 +125,9 @@ export default function CompaniesPage() {
                 {c.name}
               </h2>
 
-              <p className="mt-4 text-sm text-muted-foreground leading-relaxed flex-1">
+              <div className="mt-4 text-sm text-muted-foreground leading-relaxed flex-1">
                 {renderBio(c.bio)}
-              </p>
+              </div>
 
               <a
                 href={c.website}

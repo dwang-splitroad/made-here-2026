@@ -6,8 +6,9 @@ export type ShowcasingCompany = {
   /** Official website (homepage) */
   website: string
   /**
-   * Short description. Use `**text**` for bold. Text must come from the company
-   * (submitted via the organizers) or be quoted verbatim from its own website.
+   * Short description. Use `**text**` for bold, or lines starting with "- " for a bullet list.
+   * Text must come from the company (submitted via the organizers), from a prior year's
+   * showcase card, or be quoted verbatim from its own website.
    */
   bio: string
   /** confirmed = company signed off via Kayla Bailey; pending = quoted from their site, awaiting sign-off */
@@ -25,6 +26,7 @@ export const showcasingCompanies: ShowcasingCompany[] = [
   {
     name: "ARCH Medical Solutions",
     slug: "arch-medical-solutions",
+    logo: { src: "/companies/arch-medical-solutions-logo.png", width: 647, height: 155 },
     website: "https://arch-medical.com/",
     status: "confirmed",
     bio: "ARCH Medical Solutions provides precision manufacturing for the medical device industry, producing complex implants, instruments, and components for orthopedic, spine and surgical robotics applications. We offer specialized capabilities that include 3D printed implants through ARCH Additive, high-precision cutting instruments through ARCH Medical Grinding, and a comprehensive portfolio of standard, custom, and premium surgical instruments through ARCH-MedTorque and gSource. Our nationwide manufacturing footprint gives customers the scale, flexibility, and quality needed to support product development and commercialization. By combining specialized technologies, engineering expertise and robust quality systems under one partner, we help OEMs simplify their supply chain and bring products to market with confidence.",
@@ -32,6 +34,7 @@ export const showcasingCompanies: ShowcasingCompany[] = [
   {
     name: "Avalign",
     slug: "avalign",
+    logo: { src: "/companies/avalign-logo.png", width: 469, height: 254 },
     website: "https://www.avalign.com/",
     status: "confirmed",
     bio: "Avalign is one of the few CDMOs dedicated exclusively to orthopedics, with the breadth of capabilities to support virtually every aspect of an orthopedic implant system. Avalign offers end-to-end capabilities across the orthopedic implant system, from implants and coatings to fixation devices, complex and cutting instruments, German Specialty Instruments, cases and trays, and fully kitted implant banks and instrument sets.",
@@ -46,6 +49,7 @@ export const showcasingCompanies: ShowcasingCompany[] = [
   {
     name: "Instrumental Machine & Development (IMD)",
     slug: "imd",
+    logo: { src: "/companies/imd-logo.png", width: 657, height: 156 },
     website: "https://www.imdortho.com/",
     status: "confirmed",
     bio: "From single machining operations service to full manufacturing capabilities, you can count on Instrumental Machine & Development. Instrumental Machine & Development (IMD) is a quality minded manufacturer of orthopedic and medical instrumentation, supporting the orthopedic community. IMD is committed to quality, on-time delivery and meeting the requirements of each and every customer. Specializing in orthopedic instrumentation, sterilization trays and accessories for the operating room. IMD has the knowledge and experience to serve our customers' manufacturing and assembly needs.",
@@ -69,6 +73,7 @@ export const showcasingCompanies: ShowcasingCompany[] = [
   {
     name: "Micropulse",
     slug: "micropulse",
+    logo: { src: "/micropulse-logo.png", width: 1730, height: 356 },
     website: "https://micropulseinc.com/",
     status: "confirmed",
     bio: "Founded in 1988, Micropulse has been a trusted contract manufacturer to the orthopedic industry for nearly 40 years. As a privately held company exclusively working in orthopedics, Micropulse focuses on deep, long-term partnerships with its customers with an emphasis on quality, integrity, and open communication. Micropulse offers implant, instrument, and case & tray manufacturing, as well as sterile packaging, all under one roof.",
@@ -83,6 +88,7 @@ export const showcasingCompanies: ShowcasingCompany[] = [
   {
     name: "Precision Medical Technologies",
     slug: "precision-medical-technologies",
+    logo: { src: "/companies/precision-medical-technologies-logo.png", width: 657, height: 160 },
     website: "https://www.premedtec.com/",
     status: "confirmed",
     bio: "We specialize in manufacturing medical implants, components, and instruments for the shoulder, hip, knee, spine, and trauma and extremity markets. We have three manufacturing facilities throughout Indiana for Precision Medical Technologies as well as a facility for silicone over molded handles and a facility dedicated to PVD coatings.",
@@ -90,6 +96,7 @@ export const showcasingCompanies: ShowcasingCompany[] = [
   {
     name: "Qualitex",
     slug: "qualitex",
+    logo: { src: "/companies/qualitex-logo.png", width: 279, height: 267 },
     website: "https://www.qualitexne.com/",
     status: "confirmed",
     bio: "Qualitex is a precision CNC contract manufacturer in Columbia City, Indiana, specializing in medical device components for external fixation, surgical instruments, and implants. With Swiss Turning, 3/5-Axis Milling, Wire EDM, and Finishing under one roof, we hold tolerances to ±.0002\" from NPI through production. ISO 13485 certified and FDA registered, Qualitex is a trusted partner to leading orthopedic OEMs.",
@@ -97,10 +104,11 @@ export const showcasingCompanies: ShowcasingCompany[] = [
   {
     name: "Rayco Steel Process",
     slug: "rayco-steel-process",
+    logo: { src: "/companies/rayco-steel-process-logo.png", width: 428, height: 256 },
     website: "https://raycosteelprocess.com/",
     status: "pending",
-    // Verbatim from raycosteelprocess.com homepage
-    bio: "Rayco Steel Process has been a leading name in the steel and machining industry since its founding in 1947 by Ray Bockman. Over the decades, we have successfully met all of our customers' needs while remaining a family-owned business. Today, Rayco Steel Process holds ISO 13485:2016 quality management system (QMS) certification and is FDA compliant under 21 CFR (820), demonstrating our commitment to quality and safety.",
+    // Last year's (2025 showcase) bullets, per Kayla 10/24/2026
+    bio: "- Family owned since 1947\n- Specialize in tooling industry\n- In-house passivation and specialized finishing\n- Complex assembly and prototyping\n- Focus on a culture of quality",
   },
   {
     name: "Red Star Contract Manufacturing",
@@ -112,14 +120,16 @@ export const showcasingCompanies: ShowcasingCompany[] = [
   {
     name: "Tecomet",
     slug: "tecomet",
+    logo: { src: "/companies/tecomet-logo.png", width: 655, height: 176 },
     website: "https://www.tecomet.com/",
     status: "pending",
-    // Verbatim from tecomet.com Our Story page
-    bio: "Tecomet is a leading metal and materials innovator and contract manufacturer. Founded in 1963, Tecomet is the market leading provider of manufacturing solutions for complex, high-precision products and services for the Medical Device and Aerospace & Defense markets.",
+    // Last year's (2025 showcase) bullets, per Kayla 10/24/2026. "Salable" on the 2025 card rendered as "Scalable".
+    bio: "- Additive, case and tray, implants/instruments, casting, forging, precision machining\n- Markets include MIS, Spine, Extremities & Trauma\n- Scalable manufacturing solutions where quality is critical\n- Engineering prowess, accelerated time to market, competitive value\n- Quality assurance focus with CMM, vision systems, WinSPC",
   },
   {
     name: "TriPoint Surgical",
     slug: "tripoint-surgical",
+    logo: { src: "/companies/tripoint-surgical-logo.png", width: 656, height: 182 },
     website: "https://tripointsurgical.com/",
     status: "confirmed",
     // Shortened from the version in the organizers' doc, using its own sentences
