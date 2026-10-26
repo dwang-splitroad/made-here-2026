@@ -58,9 +58,9 @@ export const showcasingCompanies: ShowcasingCompany[] = [
     name: "Jatex",
     slug: "jatex",
     website: "https://www.jatexinc.net/",
-    status: "pending",
-    // Verbatim from jatexinc.net (About + Capabilities sections)
-    bio: "When manufacturing precision-machined products for the orthopedic and spinal industries, there's no room for error. For over 25 years, as a family owned and operated business, Jatex has consistently embraced innovation to provide a superior level of excellence. We specialize in contract manufacturing of components for spinal, joint and extremity medical device industry.",
+    status: "confirmed",
+    // Submitted by Jatex via Kayla Bailey, 10/26/2026
+    bio: "When manufacturing precision-machined products for the orthopedic and spinal industries, there's no room for error. For over 30 years, as a family owned and operated business, Jatex has consistently embraced innovation to provide a superior level of excellence.",
   },
   {
     name: "LH Medical",

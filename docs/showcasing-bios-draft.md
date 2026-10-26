@@ -10,7 +10,7 @@ Confirmed bios came from the organizers' doc "Brief bio Showcasing" (Kayla Baile
 | Avalign | avalign.com | confirmed | |
 | GCG Industries | gcgindustries.com | confirmed | "Heal. Defend. Connect." bolded per their request |
 | Instrumental Machine & Development (IMD) | imdortho.com | confirmed | |
-| Jatex | jatexinc.net | **pending** | Site quote, expanded with their Capabilities sentence |
+| Jatex | jatexinc.net | confirmed | Submitted via Kayla 10/26/2026 (notes "over 30 years") |
 | LH Medical | lhindustries.com/lh-medical | **pending** | Site quote, expanded with mission + ISO 13485 / FDA CFR 820 sentences |
 | Micropulse | micropulseinc.com | confirmed | |
 | P2 Precision | p2precision.com | confirmed | Resolved: "P2" = P2 Precision, Pierceton IN |
@@ -23,7 +23,7 @@ Confirmed bios came from the organizers' doc "Brief bio Showcasing" (Kayla Baile
 
 ## Open items
 - **Showcasing company logos** – 9 of 14 are on the page, cropped from the 2025 showcase cards (≈650px wide, fine for the cards but not print quality). Still need: **GCG Industries, Jatex, LH Medical, P2 Precision, Red Star Contract Manufacturing**. Higher-res/vector versions of the other nine welcome.
-- **Four pending companies** – Kayla gave them until EOB 10/24 and will follow up Monday 10/27.
+- **Three pending companies** (LH Medical, Rayco, Tecomet) – Kayla following up. Kayla is also contacting the five companies we still need logos from.
 
 ## Decisions made (from Kayla's doc)
 - Names: full names as written in the doc (e.g. "Rayco Steel Process", "ARCH Medical Solutions", "LH Medical").
