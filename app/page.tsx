@@ -120,8 +120,19 @@ const sponsorTiers: SponsorTier[] = [
         width: 298,
         height: 87,
       },
-      // TODO: swap to logo once Assurance Technologies sends one
-      { name: "Assurance Technologies Inc." },
+      {
+        name: "Assurance Technologies Inc.",
+        src: "/assurance-technologies-logo.png",
+        alt: "ATI – Assurance Technologies, Inc.",
+        width: 1650,
+        height: 323,
+      },
+      {
+        name: "Paragon Medical",
+        src: "/paragon-medical-logo.png",
+        width: 454,
+        height: 155,
+      },
     ],
   },
   {
