@@ -10,29 +10,18 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { showcasingCompanies } from "@/lib/showcasing-companies"
 
 const NAVY = "#26235d"
 const ORANGE = "lab(54.8% 66.8 56.8)"
 const FONT =
   'var(--font-roboto-condensed), "Avenir Next Condensed", "Avenir", -apple-system, BlinkMacSystemFont, sans-serif'
 
-const showcasingCompanies = [
-  "Precision Medical Technologies",
-  "TriPoint",
-  "LH Medical",
-  "Avalign",
-  "Red Star Manufacturing",
-  "Micropulse/RMP",
-  "Tecomet",
-  "IMD",
-  "Arch Medical",
-  "Jatex",
-]
-
 const links = [
+  { label: "Showcasing Companies", href: "/companies" },
   { label: "Purchase Tickets", href: "https://www.zeffy.com/en-US/ticketing/made-here-manufacturing-showcase-2026-draft", external: true },
-  { label: "Sponsorship", href: "#sponsorship" },
-  { label: "Agenda", href: "#agenda" },
+  { label: "Sponsorship", href: "/#sponsorship" },
+  { label: "Agenda", href: "/#agenda" },
   { label: "2025 Recap", href: "/2025", external: true },
 ]
 
@@ -61,9 +50,9 @@ export default function SiteMenu() {
         </SheetHeader>
 
         <ul className="px-6 space-y-1">
-          {showcasingCompanies.map((name) => (
+          {showcasingCompanies.map(({ name, slug }) => (
             <li
-              key={name}
+              key={slug}
               className="flex items-center gap-3 rounded-lg px-3 py-2 text-base font-bold"
               style={{ color: NAVY, backgroundColor: "oklch(0.97 0 0)" }}
             >
@@ -72,6 +61,15 @@ export default function SiteMenu() {
             </li>
           ))}
         </ul>
+        <SheetClose asChild>
+          <a
+            href="/companies"
+            className="mx-6 mt-4 inline-flex items-center gap-1 text-sm font-bold uppercase tracking-wide hover:underline"
+            style={{ color: ORANGE, fontFamily: FONT }}
+          >
+            View company profiles →
+          </a>
+        </SheetClose>
 
         <nav className="mt-8 px-6 pb-8 pt-6 border-t flex flex-col gap-1">
           {links.map(({ label, href, external }) => (
