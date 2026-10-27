@@ -11,7 +11,6 @@ Confirmed bios came from the organizers' doc "Brief bio Showcasing" (Kayla Baile
 | GCG Industries | gcgindustries.com | confirmed | "Heal. Defend. Connect." bolded per their request |
 | Instrumental Machine & Development (IMD) | imdortho.com | confirmed | |
 | Jatex | jatexinc.net | confirmed | Submitted via Kayla 10/26/2026 (notes "over 30 years") |
-| LH Medical | lhindustries.com/lh-medical | **pending** | Site quote, expanded with mission + ISO 13485 / FDA CFR 820 sentences |
 | Micropulse | micropulseinc.com | confirmed | |
 | P2 Precision | p2precision.com | confirmed | Resolved: "P2" = P2 Precision, Pierceton IN |
 | Precision Medical Technologies | premedtec.com | confirmed | Fixed typo "and well as" → "as well as" |
@@ -22,11 +21,13 @@ Confirmed bios came from the organizers' doc "Brief bio Showcasing" (Kayla Baile
 | TriPoint Surgical | tripointsurgical.com | confirmed | Shortened from the doc version using its own sentences |
 
 ## Open items
-- **Showcasing company logos** – 9 of 14 are on the page, cropped from the 2025 showcase cards (≈650px wide, fine for the cards but not print quality). Still need: **GCG Industries, Jatex, LH Medical, P2 Precision, Red Star Contract Manufacturing**. Higher-res/vector versions of the other nine welcome.
-- **Three pending companies** (LH Medical, Rayco, Tecomet) – Kayla following up. Kayla is also contacting the five companies we still need logos from.
+- **Showcasing company logos** – 9 of 13 are on the page, cropped from the 2025 showcase cards (≈650px wide, fine for the cards but not print quality). Still need: **GCG Industries, Jatex, P2 Precision, Red Star Contract Manufacturing**. Higher-res/vector versions of the other nine welcome.
+- **Two pending companies** (Rayco, Tecomet) – Kayla following up. Kayla is also contacting the four companies we still need logos from.
+
+- **LH Medical withdrew** (per Kayla 10/27/2026); removed from the page. 13 showcasing companies.
 
 ## Decisions made (from Kayla's doc)
-- Names: full names as written in the doc (e.g. "Rayco Steel Process", "ARCH Medical Solutions", "LH Medical").
+- Names: full names as written in the doc (e.g. "Rayco Steel Process", "ARCH Medical Solutions").
 - Order: alphabetical.
 - Location line: not shown.
 - Micropulse listed as "Micropulse" (no RMP).

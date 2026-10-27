@@ -18,7 +18,7 @@ export type ShowcasingCompany = {
 }
 
 /**
- * CMO Showcasing Companies for MADE HERE 2026 (14 as of 10/25/2026), alphabetical.
+ * CMO Showcasing Companies for MADE HERE 2026 (13 as of 10/27/2026; LH Medical withdrew), alphabetical.
  * Confirmed bios are from the organizers' "Brief bio Showcasing" doc (Kayla Bailey, 10/24/2026).
  * Pending bios are verbatim from each company's own site and get replaced when the company responds.
  */
@@ -61,14 +61,6 @@ export const showcasingCompanies: ShowcasingCompany[] = [
     status: "confirmed",
     // Submitted by Jatex via Kayla Bailey, 10/26/2026
     bio: "When manufacturing precision-machined products for the orthopedic and spinal industries, there's no room for error. For over 30 years, as a family owned and operated business, Jatex has consistently embraced innovation to provide a superior level of excellence.",
-  },
-  {
-    name: "LH Medical",
-    slug: "lh-medical",
-    website: "https://lhindustries.com/lh-medical/",
-    status: "pending",
-    // Verbatim from lhindustries.com/lh-medical (hero, mission, and Quality sections)
-    bio: "A leading contract manufacturer in orthopedic implants, spine implants, and simple to complex precision instruments. Our mission is to provide high-quality implantable devices and instrumentation to our partners. Quality is a critical component of everything we do, which ultimately has earned us our ISO 13485 registration. In addition, we adhere strictly to FDA CFR 820 guidelines as an indication of our commitment to quality.",
   },
   {
     name: "Micropulse",
