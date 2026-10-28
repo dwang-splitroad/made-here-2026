@@ -21,10 +21,11 @@ Confirmed bios came from the organizers' doc "Brief bio Showcasing" (Kayla Baile
 | TriPoint Surgical | tripointsurgical.com | confirmed | Shortened from the doc version using its own sentences |
 
 ## Open items
-- **Showcasing company logos** – 9 of 13 are on the page, cropped from the 2025 showcase cards (≈650px wide, fine for the cards but not print quality). Still need: **GCG Industries, Jatex, P2 Precision, Red Star Contract Manufacturing**. Higher-res/vector versions of the other nine welcome.
-- **Two pending companies** (Rayco, Tecomet) – Kayla following up. Kayla is also contacting the four companies we still need logos from.
+- **Showcasing company logos** – all 13 on the page. GCG, Jatex (SVG), P2 Precision, Red Star received 10/28/2026 from Kayla. The other nine are cropped from the 2025 showcase cards (≈650px wide); higher-res/vector versions welcome.
+- **Two pending bios** (Rayco, Tecomet) – Kayla following up.
+- **Red Star** – Travis is in talks with them; their role may change (per Kayla 10/28/2026).
 
-- **LH Medical withdrew** (per Kayla 10/27/2026); removed from the page. 13 showcasing companies.
+- **LH Medical withdrew** as a showcasing company (per Kayla 10/27/2026). LH Industries is now a Supporting Sponsor on the home page (text until a logo arrives).
 
 ## Decisions made (from Kayla's doc)
 - Names: full names as written in the doc (e.g. "Rayco Steel Process", "ARCH Medical Solutions").

@@ -144,6 +144,8 @@ const sponsorTiers: SponsorTier[] = [
       { name: "Amnovis" },
       { name: "Lewis Salvage" },
       { name: "DANCO" },
+      // Logo not yet received (per KEDCO 10/28)
+      { name: "LH Industries" },
     ],
   },
 ]

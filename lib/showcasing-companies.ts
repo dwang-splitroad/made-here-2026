@@ -42,6 +42,7 @@ export const showcasingCompanies: ShowcasingCompany[] = [
   {
     name: "GCG Industries",
     slug: "gcg-industries",
+    logo: { src: "/companies/gcg-industries-logo.png", width: 1051, height: 1200 },
     website: "https://www.gcgindustries.com/",
     status: "confirmed",
     bio: "GCG Industries is driven by a simple mission: **Heal. Defend. Connect.** We exist to improve quality of life by manufacturing the products and technologies that support healthcare, national defense, and global connectivity. Guided by exceptional people, trusted partnerships, and world-class manufacturing practices, we help our customers bring innovative solutions to market.",
@@ -57,6 +58,7 @@ export const showcasingCompanies: ShowcasingCompany[] = [
   {
     name: "Jatex",
     slug: "jatex",
+    logo: { src: "/companies/jatex-logo.svg", width: 232, height: 27 },
     website: "https://www.jatexinc.net/",
     status: "confirmed",
     // Submitted by Jatex via Kayla Bailey, 10/26/2026
@@ -73,6 +75,7 @@ export const showcasingCompanies: ShowcasingCompany[] = [
   {
     name: "P2 Precision",
     slug: "p2-precision",
+    logo: { src: "/companies/p2-precision-logo.png", width: 1200, height: 869 },
     website: "https://www.p2precision.com/",
     status: "confirmed",
     bio: "Located near Pierceton, Indiana, P2 Precision is a manufacturer of high-quality, high-precision orthopedic and medical-grade components, with a central focus on each customer's unique needs and timely delivery. P2 Precision uses cutting edge inspection equipment and is calibrated to meet tight tolerances, with a quality program that is committed to continuously evolve to meet customer needs.",
@@ -105,6 +108,7 @@ export const showcasingCompanies: ShowcasingCompany[] = [
   {
     name: "Red Star Contract Manufacturing",
     slug: "red-star-contract-manufacturing",
+    logo: { src: "/companies/red-star-contract-manufacturing-logo.png", width: 1920, height: 545 },
     website: "https://redstarcontractmfg.com/",
     status: "confirmed",
     bio: "Red Star Contract Mfg. is an ISO 13485 certified partner to medical device OEMs, providing injection molding, insert over molding, precision machining, device assembly, and sterile packaging and kitting. By building tooling and injection molding presses in-house, Red Star offers greater control over cost, quality, and production flexibility. Our vertically integrated U.S. operations help customers simplify their supply chains and move confidently from development to production.",
