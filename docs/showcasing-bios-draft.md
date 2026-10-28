@@ -18,7 +18,7 @@ Confirmed bios came from the organizers' doc "Brief bio Showcasing" (Kayla Baile
 | Rayco Steel Process | raycosteelprocess.com | **pending** | Using last year's 2025 card bullets per Kayla (from public/gallery-images) |
 | Red Star Contract Manufacturing | redstarcontractmfg.com | confirmed | Added missing final period |
 | Tecomet | tecomet.com | **pending** | Using last year's 2025 card bullets per Kayla; "Salable" rendered as "Scalable" |
-| TriPoint Surgical | tripointsurgical.com | confirmed | Shortened from the doc version using its own sentences |
+| TriPoint Surgical | tripointsurgical.com | confirmed | Using their condensed version in full (10/28/2026) |
 
 ## Open items
 - **Showcasing company logos** – all 13 on the page. GCG, Jatex (SVG), P2 Precision, Red Star received 10/28/2026 from Kayla. The other nine are cropped from the 2025 showcase cards (≈650px wide); higher-res/vector versions welcome.

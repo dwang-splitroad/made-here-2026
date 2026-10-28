@@ -128,7 +128,7 @@ export const showcasingCompanies: ShowcasingCompany[] = [
     logo: { src: "/companies/tripoint-surgical-logo.png", width: 656, height: 182 },
     website: "https://tripointsurgical.com/",
     status: "confirmed",
-    // Shortened from the version in the organizers' doc, using its own sentences
-    bio: "TriPoint Surgical is a precision contract manufacturer specializing in surgical instruments and implants for the medical device industry. Our core capabilities include precision grinding, advanced 5-axis CNC milling, Swiss CNC turning, finishing, assembly, and packaging. What sets TriPoint apart is our vertical integration, manufacturing expertise, and commitment to customer partnerships. From prototyping through full-scale production, our team takes a collaborative, solutions-driven approach built on proactive communication, transparency, and responsiveness.",
+    // TriPoint's own condensed version, as submitted
+    bio: "TriPoint Surgical is a precision contract manufacturer specializing in surgical instruments and implants for the medical device industry. Our core capabilities include precision grinding, advanced 5-axis CNC milling, Swiss CNC turning, finishing, assembly, and packaging. What sets TriPoint apart is our vertical integration, manufacturing expertise, and commitment to customer partnerships. By combining specialized capabilities under one roof, we maintain greater control over quality, lead times, and production schedules while providing the flexibility to respond quickly to changing customer needs. From prototyping through full-scale production, our team takes a collaborative, solutions-driven approach built on proactive communication, transparency, and responsiveness. At TriPoint Surgical, we deliver more than precision manufacturing. We deliver the expertise, flexibility, and trusted partnerships that help our customers succeed.",
   },
 ]
