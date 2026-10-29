@@ -129,9 +129,9 @@ const sponsorTiers: SponsorTier[] = [
       },
       {
         name: "Paragon Medical",
-        src: "/paragon-medical-logo.png",
-        width: 454,
-        height: 155,
+        src: "/Paragon-Medical-logo-RGB-compact-horizontal.png",
+        width: 4000,
+        height: 1607,
       },
     ],
   },
@@ -166,17 +166,17 @@ export default function Home() {
 
       {/* ── Hero ── */}
       <section
-        className="relative flex flex-col items-center justify-center text-center px-6 py-16 sm:py-24"
+        className="relative flex flex-col items-center justify-center text-center px-6 py-16 sm:py-24 short:pt-10 short:pb-12"
         style={{ backgroundColor: "#26235d" }}
       >
         <p
-          className="text-sm sm:text-base font-bold uppercase tracking-widest mb-6"
+          className="text-sm sm:text-base font-bold uppercase tracking-widest mb-6 short:mb-3"
           style={{ color: "oklch(0.75 0.05 264)", fontFamily: FONT }}
         >
           If it's Orthopedics,
         </p>
         <h1
-          className="text-5xl sm:text-7xl md:text-8xl font-black uppercase leading-none mb-8"
+          className="text-5xl sm:text-7xl md:text-8xl short:text-7xl font-black uppercase leading-none mb-8 short:mb-2"
           style={{ fontFamily: FONT, letterSpacing: "0.01em" }}
         >
           <span className="text-white">It's </span>
@@ -188,12 +188,12 @@ export default function Home() {
           alt="Made Here: A Manufacturing Showcase 2026"
           width={300}
           height={390}
-          className="w-48 sm:w-64 md:w-72 h-auto my-8 drop-shadow-2xl"
+          className="w-48 sm:w-64 md:w-72 h-auto my-8 drop-shadow-2xl short:w-auto short:h-[clamp(150px,26vh,300px)] short:my-5"
           priority
         />
 
         {/* Event details */}
-        <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 mt-4 text-white">
+        <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 mt-4 short:mt-0 text-white">
           <div className="flex items-center gap-3">
             <span className="text-2xl">📅</span>
             <span className="font-bold text-lg sm:text-xl" style={{ fontFamily: FONT }}>
@@ -217,7 +217,7 @@ export default function Home() {
 
         {/* Tags */}
         <div
-          className="mt-10 flex flex-wrap justify-center gap-x-1 gap-y-1 sm:gap-0 sm:divide-x divide-white/30 rounded-2xl sm:rounded-full border border-white/20 px-4 sm:px-6 py-3"
+          className="mt-10 short:mt-6 flex flex-wrap justify-center gap-x-1 gap-y-1 sm:gap-0 sm:divide-x divide-white/30 rounded-2xl sm:rounded-full border border-white/20 px-4 sm:px-6 py-3"
           style={{ backgroundColor: "rgba(255,255,255,0.08)" }}
         >
           {["Networking", "Showcase", "Dinner", "After Party"].map((tag) => (
@@ -232,7 +232,7 @@ export default function Home() {
         </div>
 
         {/* CTAs */}
-        <div className="mt-10 flex flex-col sm:flex-row items-center gap-4">
+        <div className="mt-10 short:mt-6 flex flex-col sm:flex-row items-center gap-4">
           <a
             href="https://www.zeffy.com/en-US/ticketing/made-here-manufacturing-showcase-2026-draft"
             target="_blank"

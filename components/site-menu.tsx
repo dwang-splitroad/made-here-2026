@@ -5,8 +5,6 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
@@ -18,7 +16,6 @@ const FONT =
   'var(--font-roboto-condensed), "Avenir Next Condensed", "Avenir", -apple-system, BlinkMacSystemFont, sans-serif'
 
 const links = [
-  { label: "Showcasing Companies", href: "/companies" },
   { label: "Purchase Tickets", href: "https://www.zeffy.com/en-US/ticketing/made-here-manufacturing-showcase-2026-draft", external: true },
   { label: "Sponsorship", href: "/#sponsorship" },
   { label: "Agenda", href: "/#agenda" },
@@ -36,42 +33,11 @@ export default function SiteMenu() {
         <Menu className="size-6 text-white" />
       </SheetTrigger>
 
-      <SheetContent side="right" className="overflow-y-auto gap-0">
-        <SheetHeader className="p-6 pr-12 pb-4">
-          <SheetTitle
-            className="text-2xl font-black uppercase"
-            style={{ fontFamily: FONT, color: NAVY }}
-          >
-            Showcasing Companies
-          </SheetTitle>
-          <SheetDescription>
-            {showcasingCompanies.length} companies registered to showcase at Made Here 2026.
-          </SheetDescription>
-        </SheetHeader>
+      {/* Main links first, so they stay visible on short laptop screens where the drawer scrolls. */}
+      <SheetContent side="right" className="overflow-y-auto gap-0" aria-describedby={undefined}>
+        <SheetTitle className="sr-only">Site menu</SheetTitle>
 
-        <ul className="px-6 space-y-1">
-          {showcasingCompanies.map(({ name, slug }) => (
-            <li
-              key={slug}
-              className="flex items-center gap-3 rounded-lg px-3 py-2 text-base font-bold"
-              style={{ color: NAVY, backgroundColor: "oklch(0.97 0 0)" }}
-            >
-              <span className="size-2 shrink-0 rounded-full" style={{ backgroundColor: ORANGE }} />
-              {name}
-            </li>
-          ))}
-        </ul>
-        <SheetClose asChild>
-          <a
-            href="/companies"
-            className="mx-6 mt-4 inline-flex items-center gap-1 text-sm font-bold uppercase tracking-wide hover:underline"
-            style={{ color: ORANGE, fontFamily: FONT }}
-          >
-            View company profiles →
-          </a>
-        </SheetClose>
-
-        <nav className="mt-8 px-6 pb-8 pt-6 border-t flex flex-col gap-1">
+        <nav className="px-6 pt-14 pb-6 flex flex-col gap-1">
           {links.map(({ label, href, external }) => (
             <SheetClose asChild key={label}>
               <a
@@ -85,6 +51,44 @@ export default function SiteMenu() {
             </SheetClose>
           ))}
         </nav>
+
+        <section className="border-t px-6 pt-6 pb-8">
+          <h2
+            className="text-2xl font-black uppercase leading-tight"
+            style={{ fontFamily: FONT, color: NAVY }}
+          >
+            Showcasing Companies
+          </h2>
+          <p className="mt-1.5 text-sm text-muted-foreground">
+            {showcasingCompanies.length} companies registered to showcase at Made Here 2026.
+          </p>
+          <SheetClose asChild>
+            <a
+              href="/companies"
+              className="mt-3 inline-flex items-center gap-1 text-sm font-bold uppercase tracking-wide hover:underline"
+              style={{ color: ORANGE, fontFamily: FONT }}
+            >
+              View company profiles →
+            </a>
+          </SheetClose>
+
+          <ul className="mt-4 space-y-1">
+            {showcasingCompanies.map(({ name, slug }) => (
+              <li key={slug}>
+                <SheetClose asChild>
+                  <a
+                    href={`/companies#${slug}`}
+                    className="flex items-center gap-3 rounded-lg px-3 py-2 text-base font-bold transition-colors bg-[oklch(0.97_0_0)] hover:bg-[oklch(0.93_0_0)]"
+                    style={{ color: NAVY }}
+                  >
+                    <span className="size-2 shrink-0 rounded-full" style={{ backgroundColor: ORANGE }} />
+                    {name}
+                  </a>
+                </SheetClose>
+              </li>
+            ))}
+          </ul>
+        </section>
       </SheetContent>
     </Sheet>
   )
