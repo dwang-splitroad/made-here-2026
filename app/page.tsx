@@ -33,21 +33,6 @@ type SponsorTier = {
 
 const sponsorTiers: SponsorTier[] = [
   {
-    label: "After-Party Sponsor",
-    weight: 150,
-    maxHeight: 110,
-    maxWidth: 360,
-    sponsors: [
-      {
-        name: "JPMorgan Chase",
-        src: "/jpmorgan-chase-logo.png",
-        alt: "JPMorgan Chase & Co.",
-        width: 1600,
-        height: 454,
-      },
-    ],
-  },
-  {
     label: "Titanium Sponsors",
     weight: 140,
     maxHeight: 110,
@@ -95,6 +80,13 @@ const sponsorTiers: SponsorTier[] = [
     maxHeight: 60,
     maxWidth: 190,
     sponsors: [
+      {
+        name: "JPMorgan Chase",
+        src: "/jpmorgan-chase-logo.png",
+        alt: "JPMorgan Chase & Co.",
+        width: 1600,
+        height: 454,
+      },
       {
         name: "ARCO Design/Build",
         src: "/arco-design-build-logo.png",
@@ -146,6 +138,12 @@ const sponsorTiers: SponsorTier[] = [
       { name: "DANCO" },
       // Logo not yet received (per KEDCO 10/28)
       { name: "LH Industries" },
+      {
+        name: "Red Star Contract Manufacturing",
+        src: "/red-star-contract-manufacturing-logo.png",
+        width: 1920,
+        height: 545,
+      },
     ],
   },
 ]

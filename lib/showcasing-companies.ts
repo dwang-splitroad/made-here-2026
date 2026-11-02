@@ -18,7 +18,7 @@ export type ShowcasingCompany = {
 }
 
 /**
- * CMO Showcasing Companies for MADE HERE 2026 (13 as of 10/27/2026; LH Medical withdrew), alphabetical.
+ * CMO Showcasing Companies for MADE HERE 2026 (12 as of 11/2/2026; LH Medical and Red Star withdrew), alphabetical.
  * Confirmed bios are from the organizers' "Brief bio Showcasing" doc (Kayla Bailey, 10/24/2026).
  * Pending bios are verbatim from each company's own site and get replaced when the company responds.
  */
@@ -104,14 +104,6 @@ export const showcasingCompanies: ShowcasingCompany[] = [
     status: "pending",
     // Last year's (2025 showcase) bullets, per Kayla 10/24/2026
     bio: "- Family owned since 1947\n- Specialize in tooling industry\n- In-house passivation and specialized finishing\n- Complex assembly and prototyping\n- Focus on a culture of quality",
-  },
-  {
-    name: "Red Star Contract Manufacturing",
-    slug: "red-star-contract-manufacturing",
-    logo: { src: "/companies/red-star-contract-manufacturing-logo.png", width: 1920, height: 545 },
-    website: "https://redstarcontractmfg.com/",
-    status: "confirmed",
-    bio: "Red Star Contract Mfg. is an ISO 13485 certified partner to medical device OEMs, providing injection molding, insert over molding, precision machining, device assembly, and sterile packaging and kitting. By building tooling and injection molding presses in-house, Red Star offers greater control over cost, quality, and production flexibility. Our vertically integrated U.S. operations help customers simplify their supply chains and move confidently from development to production.",
   },
   {
     name: "Tecomet",
