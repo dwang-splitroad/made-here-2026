@@ -19,6 +19,10 @@ type Sponsor = {
 
 type SponsorTier = {
   label: string
+  /** Larger, navy tier label (top tiers and the After-Party Sponsor) */
+  prominent?: boolean
+  /** Thin rule above the tier, for a sponsorship that is separate from the regular tiers */
+  divider?: boolean
   /**
    * Visual weight for every logo in the tier: the geometric mean of the rendered
    * width and height in px. Equal weight ≈ equal perceived size regardless of
@@ -34,6 +38,7 @@ type SponsorTier = {
 const sponsorTiers: SponsorTier[] = [
   {
     label: "Titanium Sponsors",
+    prominent: true,
     weight: 140,
     maxHeight: 110,
     maxWidth: 340,
@@ -61,6 +66,7 @@ const sponsorTiers: SponsorTier[] = [
   },
   {
     label: "Stainless Steel Sponsor",
+    prominent: true,
     weight: 105,
     maxHeight: 80,
     maxWidth: 260,
@@ -80,13 +86,6 @@ const sponsorTiers: SponsorTier[] = [
     maxHeight: 60,
     maxWidth: 190,
     sponsors: [
-      {
-        name: "JPMorgan Chase",
-        src: "/jpmorgan-chase-logo.png",
-        alt: "JPMorgan Chase & Co.",
-        width: 1600,
-        height: 454,
-      },
       {
         name: "ARCO Design/Build",
         src: "/arco-design-build-logo.png",
@@ -138,11 +137,24 @@ const sponsorTiers: SponsorTier[] = [
       { name: "DANCO" },
       // Logo not yet received (per KEDCO 10/28)
       { name: "LH Industries" },
+      { name: "Red Star Contract Manufacturing" },
+    ],
+  },
+  // Separate sponsorship; listed after the regular tiers per the organizers (11/2/2026)
+  {
+    label: "After-Party Sponsor",
+    prominent: true,
+    divider: true,
+    weight: 150,
+    maxHeight: 110,
+    maxWidth: 360,
+    sponsors: [
       {
-        name: "Red Star Contract Manufacturing",
-        src: "/red-star-contract-manufacturing-logo.png",
-        width: 1920,
-        height: 545,
+        name: "JPMorgan Chase",
+        src: "/jpmorgan-chase-logo.png",
+        alt: "JPMorgan Chase & Co.",
+        width: 1600,
+        height: 454,
       },
     ],
   },
@@ -516,11 +528,15 @@ export default function Home() {
           Sponsored By
         </p>
         <div className="flex flex-col gap-14 max-w-5xl mx-auto">
-          {sponsorTiers.map((tier, i) => (
-            <div key={tier.label}>
+          {sponsorTiers.map((tier) => (
+            <div
+              key={tier.label}
+              className={tier.divider ? "pt-14 border-t" : undefined}
+              style={tier.divider ? { borderColor: "oklch(0.9 0 0)" } : undefined}
+            >
               <p
-                className={`font-bold uppercase tracking-[0.2em] mb-6 ${i < 2 ? "text-sm" : "text-xs"}`}
-                style={{ color: i < 2 ? NAVY : "oklch(0.45 0.02 264)", fontFamily: FONT }}
+                className={`font-bold uppercase tracking-[0.2em] mb-6 ${tier.prominent ? "text-sm" : "text-xs"}`}
+                style={{ color: tier.prominent ? NAVY : "oklch(0.45 0.02 264)", fontFamily: FONT }}
               >
                 {tier.label}
               </p>

@@ -22,8 +22,8 @@ Confirmed bios came from the organizers' doc "Brief bio Showcasing" (Kayla Baile
 ## Open items
 - **Showcasing company logos** – all 12 on the page. GCG, Jatex (SVG), P2 Precision, Red Star received 10/28/2026 from Kayla. The other nine are cropped from the 2025 showcase cards (≈650px wide); higher-res/vector versions welcome.
 - **Two pending bios** (Rayco, Tecomet) – Kayla following up.
-- **Red Star withdrew** as a showcasing company (per Kayla 11/2/2026); now a Supporting Sponsor on the home page with logo.
-- **JPMorgan Chase** moved from its own After-Party tier into Polyethylene Sponsors (per Kayla 11/2/2026).
+- **Red Star withdrew** as a showcasing company (per Kayla 11/2/2026); now a Supporting Sponsor on the home page, listed as text (Kayla: "just text for supporting sponsors").
+- **JPMorgan Chase** stays the After-Party Sponsor (separate from the Polyethylene tier); the After-Party section now sits below the regular sponsor tiers instead of above them (per Kayla 11/2/2026).
 
 - **LH Medical withdrew** as a showcasing company (per Kayla 10/27/2026). LH Industries is now a Supporting Sponsor on the home page (text until a logo arrives).
 
