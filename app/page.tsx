@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Footer from "@/components/footer"
 import SponsorTiers from "@/components/sponsor-tiers"
+import ShowcasingCompaniesSection from "@/components/showcasing-companies-section"
 import SiteMenu from "@/components/site-menu"
 
 const NAVY = "#26235d"
@@ -429,10 +430,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Divider ── */}
-      <div className="max-w-5xl mx-auto px-6">
-        <hr style={{ borderColor: "oklch(0.88 0 0)" }} />
-      </div>
+      {/* ── Showcasing Companies ── */}
+      <ShowcasingCompaniesSection />
 
       {/* ── Sponsorship ── */}
       <SponsorTiers />
@@ -462,15 +461,47 @@ export default function Home() {
 
           <div className="space-y-3 sm:space-y-4">
             {[
-              { time: "3:00 – 5:30 p.m.", label: "Networking Event" },
-              { time: "5:45 p.m.", label: "Program, Dinner & Distinguished Panel" },
-              { time: "6:30 p.m.", label: "Showcase" },
-              { time: "8:40 p.m.", label: "Close" },
-              { time: "9:00 p.m.", label: "After-party at Anthology Whiskey Room" },
-            ].map(({ time, label }) => (
+              {
+                time: "3:00 – 5:30 p.m.",
+                label: "Networking Event",
+                details: [
+                  "Connect with orthopedic manufacturers, suppliers, and industry leaders.",
+                  "Explore new relationships and business opportunities.",
+                ],
+              },
+              {
+                time: "5:45 p.m.",
+                label: "Program, Dinner & Distinguished Panel",
+                details: [
+                  "Enjoy dinner and hear from a distinguished panel of industry leaders and a world-renowned surgeon.",
+                  "Gain insights into industry trends, challenges, and opportunities.",
+                ],
+              },
+              {
+                time: "6:30 p.m.",
+                label: "Showcase",
+                details: [
+                  "See participating manufacturers demonstrate their capabilities and expertise.",
+                  "Discover the innovation, technology, and craftsmanship behind orthopedic manufacturing.",
+                ],
+              },
+              {
+                time: "8:40 p.m.",
+                label: "Close",
+                details: ["Closing remarks and event wrap-up."],
+              },
+              {
+                time: "9:00 p.m.",
+                label: "After-party at Anthology Whiskey Room",
+                details: [
+                  "Continue the conversations in a relaxed, casual setting.",
+                  "Connect with fellow attendees and industry partners.",
+                ],
+              },
+            ].map(({ time, label, details }) => (
               <div
                 key={time}
-                className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-7 rounded-xl px-5 sm:px-7 py-4 sm:py-5 transition-colors hover:bg-white/10"
+                className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-7 rounded-xl px-5 sm:px-7 py-4 sm:py-5 transition-colors hover:bg-white/10"
                 style={{
                   backgroundColor: "rgba(255,255,255,0.05)",
                   borderLeft: `5px solid ${ORANGE}`,
@@ -482,15 +513,38 @@ export default function Home() {
                 >
                   {time}
                 </span>
-                <span
-                  className="text-lg sm:text-2xl font-bold uppercase text-white leading-tight"
-                  style={{ fontFamily: FONT }}
-                >
-                  {label}
-                </span>
+                <div className="min-w-0">
+                  <p
+                    className="text-lg sm:text-2xl font-bold uppercase text-white leading-tight"
+                    style={{ fontFamily: FONT }}
+                  >
+                    {label}
+                  </p>
+                  <ul className="mt-2 space-y-1">
+                    {details.map((d) => (
+                      <li key={d} className="flex items-start gap-2 text-sm sm:text-base text-white/75 leading-snug">
+                        <span aria-hidden="true" className="shrink-0 mt-[0.45em] size-1.5 rounded-full" style={{ backgroundColor: ORANGE }} />
+                        <span>{d}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>
+
+          <p className="mt-8 text-center text-sm sm:text-base text-white/70">
+            General admission includes the full program and dinner buffet.{" "}
+            <a
+              href="https://www.zeffy.com/en-US/ticketing/made-here-manufacturing-showcase-2026-draft"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold underline underline-offset-4 hover:opacity-80"
+              style={{ color: ORANGE }}
+            >
+              Purchase tickets
+            </a>
+          </p>
         </div>
       </section>
 
