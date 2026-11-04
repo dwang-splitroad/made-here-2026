@@ -124,6 +124,12 @@ const sponsorTiers: SponsorTier[] = [
         width: 4000,
         height: 1607,
       },
+      {
+        name: "Lake City Bank",
+        src: "/lake-city-bank-logo.png",
+        width: 1169,
+        height: 192,
+      },
     ],
   },
   {
