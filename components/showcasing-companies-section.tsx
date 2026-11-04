@@ -35,11 +35,12 @@ export default function ShowcasingCompaniesSection() {
           >
             Meet the Companies Showcasing at MADE HERE
           </h2>
+          {/* Intro copy approved by Matt Deuel, 11/4/2026 */}
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-            The showcase is the heart of the evening. {count} orthopedic contract manufacturers
-            take the floor at MADE HERE 2026, each milling a unique component to tell the story of
-            the Orthopedic Capital of the World®. Every one of them is a supplier you can meet
-            in person that night.
+            The MADE HERE Showcase brings together leading orthopedic manufacturers to highlight
+            their expertise, innovative technologies, and manufacturing capabilities. Discover the
+            companies, craftsmanship, and solutions helping shape the future of the orthopedic
+            industry.
           </p>
         </div>
 

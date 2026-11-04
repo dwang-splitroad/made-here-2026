@@ -494,8 +494,8 @@ export default function Home() {
                 time: "9:00 p.m.",
                 label: "After-party at Anthology Whiskey Room",
                 details: [
-                  "Continue the conversations in a relaxed, casual setting.",
-                  "Connect with fellow attendees and industry partners.",
+                  "Keep the conversations going in a relaxed setting with fellow attendees and industry partners.",
+                  "Included with registration, featuring admission, a complimentary drink, and hors d'oeuvres.",
                 ],
               },
             ].map(({ time, label, details }) => (
@@ -534,7 +534,7 @@ export default function Home() {
           </div>
 
           <p className="mt-8 text-center text-sm sm:text-base text-white/70">
-            General admission includes the full program and dinner buffet.{" "}
+            General admission includes the full program, dinner buffet, and after-party.{" "}
             <a
               href="https://www.zeffy.com/en-US/ticketing/made-here-manufacturing-showcase-2026-draft"
               target="_blank"
