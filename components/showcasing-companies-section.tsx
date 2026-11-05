@@ -12,6 +12,20 @@ const FONT =
  * so an OEM visitor sees who they can meet without opening the menu.
  * Data comes from lib/showcasing-companies.ts; the count updates automatically.
  */
+/** Networking vs. Showcase explainer. Copy approved by Matt Deuel, 11/5/2026. */
+const eveningParts = [
+  {
+    when: "3:00 – 5:30 p.m.",
+    title: "Networking",
+    body: "The evening starts the moment you walk in. Meet orthopedic manufacturers, suppliers, and industry leaders before the program begins. No agenda, no assigned seats.",
+  },
+  {
+    when: "6:30 p.m. · Following the panel",
+    title: "The Showcase",
+    body: "After dinner and the panel, the showcasing companies take the stage for a series of fun, fast-paced, 90-second presentations. Each company highlights its capabilities and the work it does for the orthopedic industry, built around this year's technical focus, Advanced Axis CNC Milling. It's a quick, engaging way to discover what each manufacturer does and connect with the people behind it.",
+  },
+]
+
 export default function ShowcasingCompaniesSection() {
   const count = showcasingCompanies.length
 
@@ -44,7 +58,31 @@ export default function ShowcasingCompaniesSection() {
           </p>
         </div>
 
-        <ul className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          {eveningParts.map((part) => (
+            <div
+              key={part.title}
+              className="rounded-xl bg-white p-6 sm:p-7"
+              style={{ border: "1px solid oklch(0.9 0 0)", borderLeft: `5px solid ${ORANGE}` }}
+            >
+              <p
+                className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-2"
+                style={{ color: ORANGE, fontFamily: FONT }}
+              >
+                {part.when}
+              </p>
+              <h3
+                className="text-2xl sm:text-3xl font-black uppercase leading-tight mb-3"
+                style={{ fontFamily: FONT, color: NAVY }}
+              >
+                {part.title}
+              </h3>
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{part.body}</p>
+            </div>
+          ))}
+        </div>
+
+        <ul className="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
           {showcasingCompanies.map((c) => (
             <li key={c.slug}>
               <Link
