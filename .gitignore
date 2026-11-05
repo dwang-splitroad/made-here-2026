@@ -30,3 +30,4 @@ next-env.d.ts
 public/*.mp4
 # Raw sponsor logo drops (source files only; used logos are copied to public/ root)
 /public/Sponsors/
+/public/Made-Here-Panelists-headshots/

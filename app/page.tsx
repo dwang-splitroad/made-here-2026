@@ -2,6 +2,7 @@ import Image from "next/image"
 import Footer from "@/components/footer"
 import SponsorTiers from "@/components/sponsor-tiers"
 import ShowcasingCompaniesSection from "@/components/showcasing-companies-section"
+import SpeakersSection from "@/components/speakers-section"
 import SiteMenu from "@/components/site-menu"
 
 const NAVY = "#26235d"
@@ -433,6 +434,9 @@ export default function Home() {
       {/* ── Showcasing Companies ── */}
       <ShowcasingCompaniesSection />
 
+      {/* ── Program & Speakers ── */}
+      <SpeakersSection />
+
       {/* ── Sponsorship ── */}
       <SponsorTiers />
 
@@ -473,7 +477,7 @@ export default function Home() {
                 time: "5:45 p.m.",
                 label: "Program, Dinner & Distinguished Panel",
                 details: [
-                  "Enjoy dinner and hear from a distinguished panel of industry leaders and a world-renowned surgeon.",
+                  "Enjoy dinner and hear from Enovis leaders Matthew Hunley, Louie Vogt, and Ann Vu, in a panel moderated by Dr. Mark A. Klaassen.",
                   "Gain insights into industry trends, challenges, and opportunities.",
                 ],
               },

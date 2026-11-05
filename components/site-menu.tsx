@@ -17,6 +17,7 @@ const FONT =
 
 const links = [
   { label: "Purchase Tickets", href: "https://www.zeffy.com/en-US/ticketing/made-here-manufacturing-showcase-2026-draft", external: true },
+  { label: "Speakers", href: "/#speakers" },
   { label: "Sponsorship", href: "/#sponsorship" },
   { label: "Agenda", href: "/#agenda" },
   { label: "2025 Recap", href: "/2025", external: true },
