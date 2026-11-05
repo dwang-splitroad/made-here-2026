@@ -22,15 +22,7 @@ const avenirCondensed = {
 export const metadata: Metadata = {
   title: "Made Here 2026 | A Manufacturing Showcase",
   description: "December 9, 2026 at the Manahan Orthopaedic Capital Center® in Winona Lake, Indiana. An exclusive evening of networking, discovery, and industry leadership in the Orthopedic Capital of the World®.",
-  generator: "v0.app",
-  icons: {
-    icon: [
-      {
-        url: "/made-here-url-icon.png",
-      },
-    ],
-    apple: "/made-here-url-icon.png",
-  },
+  // Icons come from app/favicon.ico, app/icon.png, and app/apple-icon.png (Next file convention)
 }
 
 export default function RootLayout({
