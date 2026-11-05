@@ -380,7 +380,7 @@ export default function Home() {
                 Indiana: <strong style={{ color: ORANGE }}>The Orthopedic Capital of the World®</strong>.
               </p>
               <p>
-                Building on the success of prior MADE HERE events, the 2026 showcase expands the lens
+                Building on the success of last year's inaugural MADE HERE, the 2026 showcase expands the lens
                 beyond county lines to emphasize the Midwest orthopedic manufacturing ecosystem,
                 reinforcing why this region continues to set the global standard for orthopedic
                 innovation, production, and scale.
