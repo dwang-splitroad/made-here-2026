@@ -34,6 +34,8 @@ type SponsorTier = {
   /** Clamps so very tall or very wide logos don't blow out the row */
   maxHeight: number
   maxWidth: number
+  /** Caps the logo row width (px) so a tier wraps into even rows instead of leaving one logo alone */
+  rowMaxWidth?: number
   sponsors: Sponsor[]
 }
 
@@ -44,6 +46,8 @@ const sponsorTiers: SponsorTier[] = [
     weight: 140,
     maxHeight: 110,
     maxWidth: 340,
+    // Four logos don't fit on one row; this wraps them two and two
+    rowMaxWidth: 760,
     sponsors: [
       {
         name: "1Factory",
@@ -63,6 +67,12 @@ const sponsorTiers: SponsorTier[] = [
         alt: "NPG – Network Partners Group",
         width: 800,
         height: 125,
+      },
+      {
+        name: "Split Road Media",
+        src: "/split-road-media-logo.png",
+        width: 2622,
+        height: 796,
       },
     ],
   },
@@ -604,7 +614,10 @@ export default function Home() {
               >
                 {tier.label}
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-x-14 gap-y-8 px-4">
+              <div
+                className="flex flex-wrap items-center justify-center gap-x-14 gap-y-8 px-4 mx-auto"
+                style={tier.rowMaxWidth ? { maxWidth: tier.rowMaxWidth } : undefined}
+              >
                 {tier.sponsors.map((sp) =>
                   sp.src ? (
                     <Image
