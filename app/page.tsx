@@ -57,9 +57,9 @@ const sponsorTiers: SponsorTier[] = [
       },
       {
         name: "Precision Medical Technologies",
-        src: "/precision-medical-technologies-logo.png",
-        width: 215,
-        height: 156,
+        src: "/companies/precision-medical-technologies-logo.png",
+        width: 657,
+        height: 160,
       },
       {
         name: "Network Partners Group",
