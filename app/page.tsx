@@ -311,6 +311,15 @@ export default function Home() {
               ))}
             </div>
 
+            <a
+              href="/why-attend"
+              className="group mt-8 inline-flex items-center gap-2 self-start rounded-lg px-6 py-3 text-base font-black uppercase tracking-wide text-white transition-opacity hover:opacity-90"
+              style={{ backgroundColor: NAVY, fontFamily: FONT }}
+            >
+              Why Attend MADE HERE
+              <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+
             {/* Event Structure */}
             <div className="mt-10">
               <h3
@@ -370,7 +379,7 @@ export default function Home() {
           </div>
 
           {/* Right: About */}
-          <div>
+          <div className="flex flex-col">
             <p
               className="text-3xl sm:text-4xl font-black uppercase leading-tight mb-6"
               style={{ fontFamily: FONT, color: NAVY }}
@@ -401,9 +410,9 @@ export default function Home() {
               </p>
             </div>
 
-            {/* 2026 Technical Focus */}
+            {/* 2026 Technical Focus. Grows to match the Why Attend column on desktop. */}
             <div
-              className="mt-8 rounded-xl p-6"
+              className="mt-8 flex flex-1 flex-col justify-center rounded-xl p-6"
               style={{ backgroundColor: NAVY }}
             >
               <p
@@ -427,9 +436,46 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Last year's story. Wording from Matt Deuel's Why Attend copy, approved 11/10/2026. */}
+        <a
+          href="/why-attend"
+          className="group mt-14 flex flex-col gap-6 rounded-xl p-6 sm:p-9 md:flex-row md:items-center md:gap-10 transition-shadow hover:shadow-md"
+          style={{
+            backgroundColor: "oklch(0.975 0.004 264)",
+            border: "1px solid oklch(0.9 0 0)",
+            borderLeft: `5px solid ${ORANGE}`,
+          }}
+        >
+          <div className="md:flex-1">
+            <p
+              className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-3"
+              style={{ color: ORANGE, fontFamily: FONT }}
+            >
+              Last Year at MADE HERE
+            </p>
+            <p
+              className="text-2xl sm:text-4xl font-black uppercase leading-tight"
+              style={{ fontFamily: FONT, color: NAVY }}
+            >
+              &ldquo;We feel like you made this event for us.&rdquo;
+            </p>
+            <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
+              One visiting company at last year&apos;s inaugural event, which brought together
+              approximately 300 industry professionals.
+            </p>
+          </div>
+          <span
+            className="inline-flex items-center gap-2 self-start md:self-center whitespace-nowrap text-sm sm:text-base font-black uppercase tracking-wide"
+            style={{ fontFamily: FONT, color: NAVY }}
+          >
+            See Why to Attend
+            <span aria-hidden="true" className="text-lg transition-transform group-hover:translate-x-1" style={{ color: ORANGE }}>→</span>
+          </span>
+        </a>
+
         {/* Banner */}
         <div
-          className="mt-14 rounded-xl px-8 py-5 text-center"
+          className="mt-6 rounded-xl px-8 py-5 text-center"
           style={{ backgroundColor: NAVY }}
         >
           <p

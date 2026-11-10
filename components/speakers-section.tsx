@@ -14,11 +14,15 @@ type Speaker = {
   organization: string
   /** Square headshot in /public/speakers */
   photo: string
+  /** One or two sentences, drawn from Travis Christman's notes and approved by Matt Deuel */
+  bio?: string
 }
 
 /**
  * Names, titles, and headshots supplied by Matt Deuel on 11/5/2026.
- * Nothing here is written by us: no bios or topics until the organizers send them.
+ * Bios are condensed from Travis Christman's notes (11/5/2026) and were approved
+ * by Matt on 11/10/2026. Dr. Meneghini is the emcee only, not a keynote (Matt, 11/10).
+ * Personal details from the notes are left out until the panelists agree to them.
  */
 const hosts: Speaker[] = [
   {
@@ -35,6 +39,7 @@ const hosts: Speaker[] = [
     title: "Orthopedic Surgeon",
     organization: "WarsawONE",
     photo: "/speakers/mark-klaassen.jpg",
+    bio: "A surgeon, educator, and humanitarian with more than 30 years of experience in joint replacement and advanced surgical techniques. He returns to the MADE HERE stage after joining last year's panel.",
   },
 ]
 
@@ -45,6 +50,7 @@ const panelists: Speaker[] = [
     title: "Vice President, Operations & Supply Chain",
     organization: "Enovis",
     photo: "/speakers/matthew-hunley.jpg",
+    bio: "A senior operations and supply chain leader who attended last year's MADE HERE. He brings the view of an OEM supply chain owner who relies on the ecosystem for parts not made in house.",
   },
   {
     role: "Panelist",
@@ -52,6 +58,7 @@ const panelists: Speaker[] = [
     title: "Group President, Global Recon, Surgical & Foot and Ankle; Executive Officer",
     organization: "Enovis",
     photo: "/speakers/louie-vogt.jpg",
+    bio: "A Warsaw native who has led across recon, sports medicine, biologics, trauma, marketing, and sales. He now helps lead one of the fastest-growing OEMs in the space.",
   },
   {
     role: "Panelist",
@@ -60,41 +67,50 @@ const panelists: Speaker[] = [
     title: "Chief Quality, Regulatory Affairs & Clinical Officer",
     organization: "Enovis",
     photo: "/speakers/ann-vu.jpg",
+    bio: "Brings the perspective of patient safety, care, and outcomes. She is known for her leadership as a change agent and has worked in and around this ecosystem.",
   },
 ]
 
 function SpeakerCard({ speaker }: { speaker: Speaker }) {
   return (
-    // Photo beside the text on phones, stacked and centered from sm up
+    // Each card spans two shared rows (details, bio) so the bio dividers line up across a row of cards
     <li
-      className="flex items-center gap-4 rounded-xl p-4 sm:flex-col sm:gap-5 sm:p-7 sm:text-center"
+      className="row-span-2 grid grid-rows-subgrid gap-0 rounded-xl p-4 sm:p-7"
       style={{ backgroundColor: "rgba(255,255,255,0.05)" }}
     >
-      <Image
-        src={speaker.photo}
-        alt={`${speaker.name}, ${speaker.organization}`}
-        width={640}
-        height={640}
-        sizes="(min-width: 640px) 144px, 96px"
-        className="size-24 shrink-0 rounded-full object-cover sm:size-36"
-        style={{ boxShadow: `0 0 0 3px ${ORANGE}` }}
-      />
-      <div className="min-w-0">
-        <p
-          className="text-xs font-bold uppercase tracking-[0.2em] mb-1.5"
-          style={{ color: ORANGE, fontFamily: FONT }}
-        >
-          {speaker.role}
-        </p>
-        <h3 className="text-xl sm:text-2xl font-black leading-tight text-white" style={{ fontFamily: FONT }}>
-          {speaker.name}
-          {speaker.credentials ? (
-            <span className="font-bold text-white/60 text-base sm:text-lg">, {speaker.credentials}</span>
-          ) : null}
-        </h3>
-        <p className="mt-2 text-sm text-white/75 leading-snug">{speaker.title}</p>
-        <p className="mt-1 text-sm font-bold text-white">{speaker.organization}</p>
+      {/* Photo beside the text on phones, stacked and centered from sm up */}
+      <div className="flex items-center gap-4 self-start sm:flex-col sm:gap-5 sm:text-center">
+        <Image
+          src={speaker.photo}
+          alt={`${speaker.name}, ${speaker.organization}`}
+          width={640}
+          height={640}
+          sizes="(min-width: 640px) 144px, 96px"
+          className="size-24 shrink-0 rounded-full object-cover sm:size-36"
+          style={{ boxShadow: `0 0 0 3px ${ORANGE}` }}
+        />
+        <div className="min-w-0">
+          <p
+            className="text-xs font-bold uppercase tracking-[0.2em] mb-1.5"
+            style={{ color: ORANGE, fontFamily: FONT }}
+          >
+            {speaker.role}
+          </p>
+          <h3 className="text-xl sm:text-2xl font-black leading-tight text-white" style={{ fontFamily: FONT }}>
+            {speaker.name}
+            {speaker.credentials ? (
+              <span className="font-bold text-white/60 text-base sm:text-lg">, {speaker.credentials}</span>
+            ) : null}
+          </h3>
+          <p className="mt-2 text-sm text-white/75 leading-snug">{speaker.title}</p>
+          <p className="mt-1 text-sm font-bold text-white">{speaker.organization}</p>
+        </div>
       </div>
+      {speaker.bio ? (
+        <p className="mt-4 self-start border-t border-white/10 pt-4 text-sm leading-relaxed text-white/75 sm:mt-5 sm:pt-5 sm:text-center">
+          {speaker.bio}
+        </p>
+      ) : null}
     </li>
   )
 }
@@ -132,10 +148,14 @@ export default function SpeakersSection() {
         </ul>
 
         <p
-          className="mt-10 sm:mt-12 mb-5 sm:mb-6 text-center text-sm font-bold uppercase tracking-[0.3em] text-white/70"
+          className="mt-10 sm:mt-12 mb-3 text-center text-sm font-bold uppercase tracking-[0.3em] text-white/70"
           style={{ fontFamily: FONT }}
         >
           Panelists
+        </p>
+        <p className="mb-6 sm:mb-8 max-w-2xl mx-auto text-center text-base sm:text-lg text-white/85 leading-relaxed">
+          An all-Enovis panel on this year&apos;s theme: &ldquo;Why produce your medical device
+          anywhere else? If it&apos;s orthopedics, it&apos;s MADE HERE.&rdquo;
         </p>
         <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
           {panelists.map((s) => (
