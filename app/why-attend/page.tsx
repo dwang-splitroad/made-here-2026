@@ -20,10 +20,7 @@ export const metadata: Metadata = {
 }
 
 /**
- * Copy written by Matt Deuel (11/5/2026) and approved 11/10/2026.
- * Two wording changes from his draft, both to match the facts he sent on 11/10:
- * the company in the story is a contract manufacturer, so "OEM" reads "company",
- * and it opened a production site, so "local office" reads "local production site".
+ * Copy written by Matt Deuel (11/5/2026) and approved 11/10/2026, used as he wrote it.
  * Per Matt: last year's attendance is 300; make no attendance claims for this year.
  */
 export default function WhyAttendPage() {
@@ -122,7 +119,7 @@ export default function WhyAttendPage() {
           </p>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
             Last year&apos;s inaugural event brought together approximately 300 industry
-            professionals. One visiting company was so impressed by the experience and the
+            professionals. One visiting OEM was so impressed by the experience and the
             opportunities within our region that they said:
           </p>
           <blockquote
@@ -132,8 +129,8 @@ export default function WhyAttendPage() {
             &ldquo;We feel like you made this event for us.&rdquo;
           </blockquote>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-            Today, that company has established a local production site to become part of this
-            growing orthopedic ecosystem.
+            Today, that company has established a local office to become part of this growing
+            orthopedic ecosystem.
           </p>
         </div>
 

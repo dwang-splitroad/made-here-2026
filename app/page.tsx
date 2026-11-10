@@ -460,7 +460,7 @@ export default function Home() {
               &ldquo;We feel like you made this event for us.&rdquo;
             </p>
             <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
-              One visiting company at last year&apos;s inaugural event, which brought together
+              One visiting OEM at last year&apos;s inaugural event, which brought together
               approximately 300 industry professionals.
             </p>
           </div>
