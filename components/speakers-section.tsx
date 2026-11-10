@@ -31,6 +31,8 @@ const hosts: Speaker[] = [
     title: "Orthopedic Surgeon, Founder & CEO",
     organization: "Indiana Orthopedic Institute",
     photo: "/speakers/michael-meneghini.jpg",
+    // Written by Matt Deuel, 11/10/2026
+    bio: "A nationally recognized orthopedic surgeon, engineer, and innovator who brings a unique perspective on the connection between surgical innovation and advanced manufacturing. He joins MADE HERE as this year's emcee.",
   },
   {
     role: "Panel Moderator",

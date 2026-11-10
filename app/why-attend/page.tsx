@@ -180,6 +180,20 @@ export default function WhyAttendPage() {
             </li>
           ))}
         </ul>
+
+        {/* Travis Christman's ecosystem line; wording approved by Matt Deuel, 11/10/2026 */}
+        <div className="mt-10 sm:mt-14 rounded-xl px-6 py-8 sm:px-12 sm:py-10 text-center" style={{ backgroundColor: NAVY }}>
+          <p
+            className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-3"
+            style={{ color: ORANGE, fontFamily: FONT }}
+          >
+            The Orthopedic Capital of the World®
+          </p>
+          <p className="max-w-3xl mx-auto text-xl sm:text-2xl font-bold leading-snug text-white">
+            You can do it all right here, from the OR to quality systems, 510(k), manufacturing,
+            sterile packaging, terminal sterilization, and distribution.
+          </p>
+        </div>
       </section>
 
       {/* ── Closing call to action ── */}
