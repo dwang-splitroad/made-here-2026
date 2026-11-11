@@ -156,6 +156,9 @@ const sponsorTiers: SponsorTier[] = [
       // Logo not yet received (per KEDCO 10/28)
       { name: "LH Industries" },
       { name: "Red Star Contract Manufacturing" },
+      // Added per Kayla Bailey, 11/11/2026; names as shown on youthefan.com and wvpa.com
+      { name: "YouTheFan" },
+      { name: "Wabash Valley Power Alliance" },
     ],
   },
   // Separate sponsorship; listed after the regular tiers per the organizers (11/2/2026)
