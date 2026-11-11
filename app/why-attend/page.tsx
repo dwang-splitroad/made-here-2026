@@ -95,16 +95,32 @@ export default function WhyAttendPage() {
         </p>
       </section>
 
-      {/* ── Intro + last year's story ── */}
+      {/* ── Intro ── */}
       <section className="max-w-3xl mx-auto px-6 pt-14 sm:pt-20">
         <p className="text-lg sm:text-xl leading-relaxed" style={{ color: NAVY }}>
           MADE HERE is more than an orthopedic manufacturing showcase. It&apos;s an opportunity to
           build relationships, discover new manufacturing partners, and connect with the people and
           companies driving the orthopedic industry forward.
         </p>
+      </section>
 
+      {/* ── Teaser video (KEDCO's 2026 teaser, supplied 11/10/2026). Loads only when played. ── */}
+      <section className="max-w-4xl mx-auto px-6 mt-10 sm:mt-12">
+        <video
+          controls
+          playsInline
+          preload="none"
+          poster="/videos/made-here-2026-teaser-poster.jpg"
+          aria-label="MADE HERE 2026 teaser video"
+          className="block w-full aspect-video rounded-xl bg-black shadow-lg"
+        >
+          <source src="/videos/made-here-2026-teaser.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section className="max-w-3xl mx-auto px-6">
         <div
-          className="mt-10 rounded-xl p-6 sm:p-9"
+          className="mt-10 sm:mt-12 rounded-xl p-6 sm:p-9"
           style={{
             backgroundColor: "oklch(0.975 0.004 264)",
             border: "1px solid oklch(0.9 0 0)",
