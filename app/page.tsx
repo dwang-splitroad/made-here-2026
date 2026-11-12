@@ -17,6 +17,8 @@ type Sponsor = {
   /** Intrinsic pixel size of the (padding-trimmed) logo file */
   width?: number
   height?: number
+  /** Overrides the tier's height cap, for round or square marks that would otherwise render too small to read */
+  maxHeight?: number
 }
 
 type SponsorTier = {
@@ -142,6 +144,15 @@ const sponsorTiers: SponsorTier[] = [
         width: 1169,
         height: 192,
       },
+      // Moved up from Supporting Sponsors per Kayla Bailey, 11/12/2026
+      {
+        name: "Lewis Salvage",
+        src: "/lewis-salvage-logo.png",
+        alt: "Lewis Salvage – Warsaw + Rochester",
+        width: 262,
+        height: 262,
+        maxHeight: 84,
+      },
     ],
   },
   {
@@ -151,7 +162,6 @@ const sponsorTiers: SponsorTier[] = [
     maxWidth: 150,
     sponsors: [
       { name: "Amnovis" },
-      { name: "Lewis Salvage" },
       { name: "DANCO" },
       // Logo not yet received (per KEDCO 10/28)
       { name: "LH Industries" },
@@ -186,7 +196,7 @@ function logoWidth(sp: Sponsor, tier: SponsorTier) {
   if (!sp.width || !sp.height) return tier.maxWidth
   const ratio = sp.width / sp.height
   let w = tier.weight * Math.sqrt(ratio)
-  w = Math.min(w, tier.maxWidth, tier.maxHeight * ratio)
+  w = Math.min(w, tier.maxWidth, (sp.maxHeight ?? tier.maxHeight) * ratio)
   return Math.round(w)
 }
 

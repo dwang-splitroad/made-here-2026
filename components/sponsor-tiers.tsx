@@ -44,6 +44,7 @@ const tiers: Tier[] = [
     price: "$5,000",
     benefits: [
       "Four (4) tickets to the event & dinner",
+      "Ability to have an exhibition table",
       "Logo placement on signage and website",
       "Recognition in the event program",
     ],
@@ -53,6 +54,7 @@ const tiers: Tier[] = [
     price: "$2,500",
     benefits: [
       "Two (2) tickets to the event & dinner",
+      "Ability to have an exhibition table",
       "Logo placement on signage and website",
       "Recognition in the event program",
     ],
