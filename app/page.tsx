@@ -633,8 +633,8 @@ export default function Home() {
           <Image
             src="/kedco-horizontal-logo.png"
             alt="KEDCO – Kosciusko Economic Development Corporation"
-            width={300}
-            height={80}
+            width={1500}
+            height={310}
             className="w-60 h-auto object-contain"
           />
           <span className="hidden xl:inline text-muted-foreground text-2xl">|</span>
