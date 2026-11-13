@@ -1,9 +1,18 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import Footer from "@/components/footer"
 import SponsorTiers from "@/components/sponsor-tiers"
 import ShowcasingCompaniesSection from "@/components/showcasing-companies-section"
 import SpeakersSection from "@/components/speakers-section"
 import SiteMenu from "@/components/site-menu"
+import { pageMetadata } from "@/lib/site-metadata"
+
+export const metadata: Metadata = pageMetadata({
+  title: "Made Here 2026 | A Manufacturing Showcase",
+  description:
+    "December 9, 2026 at the Manahan Orthopaedic Capital Center® in Winona Lake, Indiana. An exclusive evening of networking, discovery, and industry leadership in the Orthopedic Capital of the World®.",
+  path: "/",
+})
 
 const NAVY = "#26235d"
 const ORANGE = "lab(54.8% 66.8 56.8)"

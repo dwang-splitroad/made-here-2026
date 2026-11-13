@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next"
+import { SITE_URL } from "@/lib/site-metadata"
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.madehere.events"
+const baseUrl = SITE_URL
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

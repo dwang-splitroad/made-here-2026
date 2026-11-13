@@ -5,6 +5,7 @@ import { Mic, Network, Search, Users, Utensils, Wine } from "lucide-react"
 import Footer from "@/components/footer"
 import SiteMenu from "@/components/site-menu"
 import { showcasingCompanies } from "@/lib/showcasing-companies"
+import { pageMetadata } from "@/lib/site-metadata"
 
 const NAVY = "#26235d"
 const ORANGE = "lab(54.8% 66.8 56.8)"
@@ -13,11 +14,12 @@ const FONT =
 
 const TICKETS_URL = "https://www.zeffy.com/en-US/ticketing/made-here-manufacturing-showcase-2026-draft"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Why Attend | Made Here 2026",
   description:
     "MADE HERE is more than an orthopedic manufacturing showcase. Build relationships, discover new manufacturing partners, and connect with the people driving the orthopedic industry forward. December 9, 2026 in Winona Lake, Indiana.",
-}
+  path: "/why-attend",
+})
 
 /**
  * Copy written by Matt Deuel (11/5/2026) and approved 11/10/2026, used as he wrote it.

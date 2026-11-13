@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono, Roboto_Condensed } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
+import { SITE_URL, pageMetadata } from "@/lib/site-metadata"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -19,9 +20,14 @@ const avenirCondensed = {
   fontWeight: 700,
 }
 
+// Site-wide defaults (also what a "page not found" link would show). Each page sets its own.
 export const metadata: Metadata = {
-  title: "Made Here 2026 | A Manufacturing Showcase",
-  description: "December 9, 2026 at the Manahan Orthopaedic Capital Center® in Winona Lake, Indiana. An exclusive evening of networking, discovery, and industry leadership in the Orthopedic Capital of the World®.",
+  metadataBase: new URL(SITE_URL),
+  ...pageMetadata({
+    title: "Made Here 2026 | A Manufacturing Showcase",
+    description:
+      "December 9, 2026 at the Manahan Orthopaedic Capital Center® in Winona Lake, Indiana. An exclusive evening of networking, discovery, and industry leadership in the Orthopedic Capital of the World®.",
+  }),
   // Icons come from app/favicon.ico, app/icon.png, and app/apple-icon.png (Next file convention)
 }
 

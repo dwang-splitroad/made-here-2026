@@ -6,17 +6,19 @@ import { ArrowUpRight } from "lucide-react"
 import Footer from "@/components/footer"
 import SiteMenu from "@/components/site-menu"
 import { showcasingCompanies } from "@/lib/showcasing-companies"
+import { pageMetadata } from "@/lib/site-metadata"
 
 const NAVY = "#26235d"
 const ORANGE = "lab(54.8% 66.8 56.8)"
 const FONT =
   'var(--font-roboto-condensed), "Avenir Next Condensed", "Avenir", -apple-system, BlinkMacSystemFont, sans-serif'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Showcasing Companies | Made Here 2026",
   description:
     "Meet the orthopedic contract manufacturers showcasing their capabilities at MADE HERE 2026 in Winona Lake, Indiana.",
-}
+  path: "/companies",
+})
 
 function hostname(url: string) {
   try {
