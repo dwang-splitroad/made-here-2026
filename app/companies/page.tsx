@@ -39,7 +39,7 @@ function renderInline(text: string) {
   )
 }
 
-/** A bio is either a paragraph or, when every line starts with "- ", a bullet list. */
+/** A bio is a bullet list when every line starts with "- "; otherwise paragraphs split on blank lines. */
 function renderBio(text: string) {
   const lines = text.split("\n")
   if (lines.length > 1 && lines.every((l) => l.startsWith("- "))) {
@@ -49,6 +49,16 @@ function renderBio(text: string) {
           <li key={i}>{renderInline(l.slice(2))}</li>
         ))}
       </ul>
+    )
+  }
+  const paragraphs = text.split(/\n\s*\n/)
+  if (paragraphs.length > 1) {
+    return (
+      <div className="space-y-3">
+        {paragraphs.map((p, i) => (
+          <p key={i}>{renderInline(p)}</p>
+        ))}
+      </div>
     )
   }
   return renderInline(text)

@@ -15,13 +15,13 @@ Confirmed bios came from the organizers' doc "Brief bio Showcasing" (Kayla Baile
 | P2 Precision | p2precision.com | confirmed | Resolved: "P2" = P2 Precision, Pierceton IN |
 | Precision Medical Technologies | premedtec.com | confirmed | Fixed typo "and well as" → "as well as" |
 | Qualitex | qualitexne.com | confirmed | Tolerance symbol rendered as ± (garbled in the .docx) |
-| Rayco Steel Process | raycosteelprocess.com | **pending** | Using last year's 2025 card bullets per Kayla (from public/gallery-images) |
+| Rayco Steel Process | raycosteelprocess.com | confirmed | Bio and high-res logo sent by Rayco via Kayla 11/13/2026 (replaces the 2025 card bullets) |
 | Tecomet | tecomet.com | **pending** | Using last year's 2025 card bullets per Kayla; "Salable" rendered as "Scalable" |
 | TriPoint Surgical | tripointsurgical.com | confirmed | Using their condensed version in full (10/28/2026) |
 
 ## Open items
 - **Showcasing company logos** – all 12 on the page. GCG, Jatex (SVG), P2 Precision, Red Star received 10/28/2026 from Kayla. The other nine are cropped from the 2025 showcase cards (≈650px wide); higher-res/vector versions welcome.
-- **Two pending bios** (Rayco, Tecomet) – Kayla following up.
+- **One pending bio** (Tecomet) – Kayla following up. Rayco confirmed 11/13/2026.
 - **Red Star withdrew** as a showcasing company (per Kayla 11/2/2026); now a Supporting Sponsor on the home page, listed as text (Kayla: "just text for supporting sponsors").
 - **JPMorgan Chase** stays the After-Party Sponsor (separate from the Polyethylene tier); the After-Party section now sits below the regular sponsor tiers instead of above them (per Kayla 11/2/2026).
 

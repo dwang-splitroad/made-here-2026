@@ -6,7 +6,8 @@ export type ShowcasingCompany = {
   /** Official website (homepage) */
   website: string
   /**
-   * Short description. Use `**text**` for bold, or lines starting with "- " for a bullet list.
+   * Short description. Use `**text**` for bold, lines starting with "- " for a bullet list,
+   * or a blank line between paragraphs.
    * Text must come from the company (submitted via the organizers), from a prior year's
    * showcase card, or be quoted verbatim from its own website.
    */
@@ -99,11 +100,11 @@ export const showcasingCompanies: ShowcasingCompany[] = [
   {
     name: "Rayco Steel Process",
     slug: "rayco-steel-process",
-    logo: { src: "/companies/rayco-steel-process-logo.png", width: 428, height: 256 },
+    logo: { src: "/companies/rayco-steel-process-logo.png", width: 900, height: 537 },
     website: "https://raycosteelprocess.com/",
-    status: "pending",
-    // Last year's (2025 showcase) bullets, per Kayla 10/24/2026
-    bio: "- Family owned since 1947\n- Specialize in tooling industry\n- In-house passivation and specialized finishing\n- Complex assembly and prototyping\n- Focus on a culture of quality",
+    status: "confirmed",
+    // Bio and logo sent by Rayco via Kayla Bailey, 11/13/2026
+    bio: "At Rayco Steel Process, we combine 70+ years of craftsmanship with advanced CNC milling, turning, EDM, and finishing to deliver precision parts that meet the most challenging demands. Whether you need medical-grade components, high-performance industrial tooling, or prototypes in exotic alloys, our ISO certified shop handles it all (from one-off prototypes to full production runs) with strict quality control and full traceability.\n\nMachining complex geometries since 1947. Let's build something remarkable!",
   },
   {
     name: "Tecomet",
