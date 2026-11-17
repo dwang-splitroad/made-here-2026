@@ -162,6 +162,13 @@ const sponsorTiers: SponsorTier[] = [
         height: 262,
         maxHeight: 84,
       },
+      // Added per the organizers, 11/17/2026
+      {
+        name: "Medartis",
+        src: "/medartis-logo.png",
+        width: 1259,
+        height: 226,
+      },
     ],
   },
   {
