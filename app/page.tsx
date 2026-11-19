@@ -185,6 +185,8 @@ const sponsorTiers: SponsorTier[] = [
       // Added per Kayla Bailey, 11/11/2026; names as shown on youthefan.com and wvpa.com
       { name: "YouTheFan" },
       { name: "Wabash Valley Power Alliance" },
+      // Added per the organizers, 11/19/2026
+      { name: "Clover Machinery Movers" },
     ],
   },
   // Separate sponsorship; listed after the regular tiers per the organizers (11/2/2026)
