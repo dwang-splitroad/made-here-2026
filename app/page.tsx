@@ -57,8 +57,8 @@ const sponsorTiers: SponsorTier[] = [
     weight: 140,
     maxHeight: 110,
     maxWidth: 340,
-    // Four logos don't fit on one row; this wraps them two and two
-    rowMaxWidth: 760,
+    // Five logos don't fit on one row; this wraps them three and two
+    rowMaxWidth: 1040,
     sponsors: [
       {
         name: "1Factory",
@@ -84,6 +84,14 @@ const sponsorTiers: SponsorTier[] = [
         src: "/split-road-media-logo.png",
         width: 2622,
         height: 796,
+      },
+      // Confirmed per the organizers, 11/23/2026
+      {
+        name: "NSF IMPACT",
+        src: "/nsf-impact-logo.png",
+        alt: "NSF | IMPACT",
+        width: 1400,
+        height: 395,
       },
     ],
   },
