@@ -57,7 +57,7 @@ const sponsorTiers: SponsorTier[] = [
     weight: 140,
     maxHeight: 110,
     maxWidth: 340,
-    // Five logos don't fit on one row; this wraps them three and two
+    // Six logos don't fit on one row; this wraps them three and three
     rowMaxWidth: 1040,
     sponsors: [
       {
@@ -92,6 +92,13 @@ const sponsorTiers: SponsorTier[] = [
         alt: "NSF | IMPACT",
         width: 1400,
         height: 395,
+      },
+      // Confirmed per the organizers, 11/25/2026
+      {
+        name: "Don Wood Foundation",
+        src: "/don-wood-foundation-logo.png",
+        width: 2250,
+        height: 451,
       },
     ],
   },
