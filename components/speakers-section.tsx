@@ -117,6 +117,9 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
   )
 }
 
+/** Everyone on the program, in page order (also used for the home page's structured data) */
+export const speakers: Speaker[] = [...hosts, ...panelists]
+
 export default function SpeakersSection() {
   return (
     <section

@@ -3,9 +3,10 @@ import Image from "next/image"
 import Footer from "@/components/footer"
 import SponsorTiers from "@/components/sponsor-tiers"
 import ShowcasingCompaniesSection from "@/components/showcasing-companies-section"
-import SpeakersSection from "@/components/speakers-section"
+import SpeakersSection, { speakers } from "@/components/speakers-section"
 import SiteMenu from "@/components/site-menu"
 import { pageMetadata } from "@/lib/site-metadata"
+import { buildEventSchema, jsonLd } from "@/lib/event-schema"
 
 export const metadata: Metadata = pageMetadata({
   title: "Made Here 2026 | A Manufacturing Showcase",
@@ -28,6 +29,8 @@ type Sponsor = {
   height?: number
   /** Overrides the tier's height cap, for round or square marks that would otherwise render too small to read */
   maxHeight?: number
+  /** Sponsor's website, for the search-engine structured data */
+  url?: string
 }
 
 type SponsorTier = {
@@ -81,6 +84,7 @@ const sponsorTiers: SponsorTier[] = [
       },
       {
         name: "Split Road Media",
+        url: "https://splitroadmedia.com",
         src: "/split-road-media-logo.png",
         width: 2622,
         height: 796,
@@ -233,9 +237,13 @@ function logoWidth(sp: Sponsor, tier: SponsorTier) {
   return Math.round(w)
 }
 
+// Search-engine structured data, filled in from the sponsor and speaker lists on this page
+const eventSchema = buildEventSchema({ sponsorTiers, speakers })
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(eventSchema) }} />
       <SiteMenu />
 
       {/* ── Hero ── */}
